@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -37,13 +39,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
-            this.txtScreen1 = new System.Windows.Forms.TextBox();
-            this.txtScreen2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtScreen1 = new System.Windows.Forms.TextBox();
             this.design27 = new customButton.Design();
             this.design28 = new customButton.Design();
             this.design29 = new customButton.Design();
@@ -75,10 +72,13 @@
             this.design4 = new customButton.Design();
             this.design2 = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
+            this.design31 = new customButton.Design();
+            this.txtScreen2 = new System.Windows.Forms.TextBox();
+            this.design32 = new customButton.Design();
             this.pnHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnHistory.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnHeader
@@ -94,6 +94,26 @@
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(327, 50);
             this.pnHeader.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(52, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Calculator";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -180,43 +200,25 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.design32);
+            this.panel1.Controls.Add(this.design31);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Controls.Add(this.btnHistory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(327, 50);
+            this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
             // 
-            // btnMenu
+            // label2
             // 
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.Location = new System.Drawing.Point(0, 0);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(50, 50);
-            this.btnMenu.TabIndex = 2;
-            this.btnMenu.UseVisualStyleBackColor = true;
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnHistory.FlatAppearance.BorderSize = 0;
-            this.btnHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
-            this.btnHistory.Location = new System.Drawing.Point(277, 0);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(50, 50);
-            this.btnHistory.TabIndex = 1;
-            this.btnHistory.UseVisualStyleBackColor = true;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(62, -1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 34);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Team";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtScreen1
             // 
@@ -225,7 +227,7 @@
             this.txtScreen1.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtScreen1.Font = new System.Drawing.Font("Gadugi", 14F);
             this.txtScreen1.ForeColor = System.Drawing.Color.Silver;
-            this.txtScreen1.Location = new System.Drawing.Point(0, 100);
+            this.txtScreen1.Location = new System.Drawing.Point(0, 86);
             this.txtScreen1.Margin = new System.Windows.Forms.Padding(0);
             this.txtScreen1.Multiline = true;
             this.txtScreen1.Name = "txtScreen1";
@@ -233,51 +235,6 @@
             this.txtScreen1.TabIndex = 3;
             this.txtScreen1.Text = "0";
             this.txtScreen1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtScreen2
-            // 
-            this.txtScreen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.txtScreen2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtScreen2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtScreen2.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScreen2.ForeColor = System.Drawing.Color.White;
-            this.txtScreen2.Location = new System.Drawing.Point(0, 125);
-            this.txtScreen2.Margin = new System.Windows.Forms.Padding(0);
-            this.txtScreen2.Multiline = true;
-            this.txtScreen2.Name = "txtScreen2";
-            this.txtScreen2.Size = new System.Drawing.Size(327, 50);
-            this.txtScreen2.TabIndex = 4;
-            this.txtScreen2.Text = "0";
-            this.txtScreen2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(52, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Calculator";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 34);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Team";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // design27
             // 
@@ -845,6 +802,54 @@
             this.ellipseControl1.CornerRadius = 20;
             this.ellipseControl1.TargetControl = this;
             // 
+            // design31
+            // 
+            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design31.BorderRadius = 20;
+            this.design31.BorderSize = 0;
+            this.design31.FlatAppearance.BorderSize = 0;
+            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design31.ForeColor = System.Drawing.Color.White;
+            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
+            this.design31.Location = new System.Drawing.Point(265, 0);
+            this.design31.Name = "design31";
+            this.design31.Size = new System.Drawing.Size(50, 36);
+            this.design31.TabIndex = 36;
+            this.design31.TextClor = System.Drawing.Color.White;
+            this.design31.UseVisualStyleBackColor = false;
+            // 
+            // txtScreen2
+            // 
+            this.txtScreen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.txtScreen2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtScreen2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtScreen2.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScreen2.ForeColor = System.Drawing.Color.White;
+            this.txtScreen2.Location = new System.Drawing.Point(0, 111);
+            this.txtScreen2.Margin = new System.Windows.Forms.Padding(0);
+            this.txtScreen2.Multiline = true;
+            this.txtScreen2.Name = "txtScreen2";
+            this.txtScreen2.Size = new System.Drawing.Size(327, 50);
+            this.txtScreen2.TabIndex = 4;
+            this.txtScreen2.Text = "0";
+            this.txtScreen2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // design32
+            // 
+            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design32.BorderRadius = 20;
+            this.design32.BorderSize = 0;
+            this.design32.FlatAppearance.BorderSize = 0;
+            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design32.ForeColor = System.Drawing.Color.White;
+            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
+            this.design32.Location = new System.Drawing.Point(9, 0);
+            this.design32.Name = "design32";
+            this.design32.Size = new System.Drawing.Size(50, 36);
+            this.design32.TabIndex = 37;
+            this.design32.TextClor = System.Drawing.Color.White;
+            this.design32.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -893,9 +898,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnHistory.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -909,10 +914,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnMenu;
-        private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.TextBox txtScreen1;
-        private System.Windows.Forms.TextBox txtScreen2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private customButton.EllipseControl ellipseControl1;
@@ -949,6 +951,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private customButton.Design design31;
+        private customButton.Design design32;
+        private System.Windows.Forms.TextBox txtScreen2;
     }
 }
 

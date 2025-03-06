@@ -39,10 +39,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.design32 = new customButton.Design();
-            this.design31 = new customButton.Design();
             this.label2 = new System.Windows.Forms.Label();
             this.txtScreen1 = new System.Windows.Forms.TextBox();
+            this.txtScreen2 = new System.Windows.Forms.TextBox();
             this.design27 = new customButton.Design();
             this.design28 = new customButton.Design();
             this.design29 = new customButton.Design();
@@ -73,8 +72,9 @@
             this.design5 = new customButton.Design();
             this.design4 = new customButton.Design();
             this.design2 = new customButton.Design();
+            this.design32 = new customButton.Design();
+            this.design31 = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
-            this.txtScreen2 = new System.Windows.Forms.TextBox();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnHistory.SuspendLayout();
@@ -92,12 +92,12 @@
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(327, 50);
+            this.pnHeader.Size = new System.Drawing.Size(327, 38);
             this.pnHeader.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(52, 15);
+            this.label1.Location = new System.Drawing.Point(63, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 4;
@@ -106,26 +106,26 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Right;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(177, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.Size = new System.Drawing.Size(50, 38);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -133,13 +133,13 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(227, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.Size = new System.Drawing.Size(50, 38);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -153,7 +153,7 @@
             this.btnExit.Location = new System.Drawing.Point(277, 0);
             this.btnExit.Margin = new System.Windows.Forms.Padding(0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(50, 50);
+            this.btnExit.Size = new System.Drawing.Size(50, 38);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -204,43 +204,11 @@
             this.panel1.Controls.Add(this.design31);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
-            // 
-            // design32
-            // 
-            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design32.BorderRadius = 20;
-            this.design32.BorderSize = 0;
-            this.design32.FlatAppearance.BorderSize = 0;
-            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design32.ForeColor = System.Drawing.Color.White;
-            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
-            this.design32.Location = new System.Drawing.Point(9, 0);
-            this.design32.Name = "design32";
-            this.design32.Size = new System.Drawing.Size(50, 36);
-            this.design32.TabIndex = 37;
-            this.design32.TextClor = System.Drawing.Color.White;
-            this.design32.UseVisualStyleBackColor = false;
-            // 
-            // design31
-            // 
-            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design31.BorderRadius = 20;
-            this.design31.BorderSize = 0;
-            this.design31.FlatAppearance.BorderSize = 0;
-            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design31.ForeColor = System.Drawing.Color.White;
-            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
-            this.design31.Location = new System.Drawing.Point(265, 0);
-            this.design31.Name = "design31";
-            this.design31.Size = new System.Drawing.Size(50, 36);
-            this.design31.TabIndex = 36;
-            this.design31.TextClor = System.Drawing.Color.White;
-            this.design31.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -259,7 +227,7 @@
             this.txtScreen1.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtScreen1.Font = new System.Drawing.Font("Gadugi", 14F);
             this.txtScreen1.ForeColor = System.Drawing.Color.Silver;
-            this.txtScreen1.Location = new System.Drawing.Point(0, 86);
+            this.txtScreen1.Location = new System.Drawing.Point(0, 74);
             this.txtScreen1.Margin = new System.Windows.Forms.Padding(0);
             this.txtScreen1.Multiline = true;
             this.txtScreen1.Name = "txtScreen1";
@@ -267,6 +235,22 @@
             this.txtScreen1.TabIndex = 3;
             this.txtScreen1.Text = "0";
             this.txtScreen1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtScreen2
+            // 
+            this.txtScreen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.txtScreen2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtScreen2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtScreen2.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScreen2.ForeColor = System.Drawing.Color.White;
+            this.txtScreen2.Location = new System.Drawing.Point(0, 99);
+            this.txtScreen2.Margin = new System.Windows.Forms.Padding(0);
+            this.txtScreen2.Multiline = true;
+            this.txtScreen2.Name = "txtScreen2";
+            this.txtScreen2.Size = new System.Drawing.Size(327, 50);
+            this.txtScreen2.TabIndex = 4;
+            this.txtScreen2.Text = "0";
+            this.txtScreen2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // design27
             // 
@@ -829,26 +813,42 @@
             this.design2.UseVisualStyleBackColor = false;
             this.design2.Click += new System.EventHandler(this.design2_Click);
             // 
+            // design32
+            // 
+            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design32.BorderRadius = 20;
+            this.design32.BorderSize = 0;
+            this.design32.FlatAppearance.BorderSize = 0;
+            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design32.ForeColor = System.Drawing.Color.White;
+            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
+            this.design32.Location = new System.Drawing.Point(9, 0);
+            this.design32.Name = "design32";
+            this.design32.Size = new System.Drawing.Size(50, 36);
+            this.design32.TabIndex = 37;
+            this.design32.TextClor = System.Drawing.Color.White;
+            this.design32.UseVisualStyleBackColor = false;
+            // 
+            // design31
+            // 
+            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design31.BorderRadius = 20;
+            this.design31.BorderSize = 0;
+            this.design31.FlatAppearance.BorderSize = 0;
+            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design31.ForeColor = System.Drawing.Color.White;
+            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
+            this.design31.Location = new System.Drawing.Point(265, 0);
+            this.design31.Name = "design31";
+            this.design31.Size = new System.Drawing.Size(50, 36);
+            this.design31.TabIndex = 36;
+            this.design31.TextClor = System.Drawing.Color.White;
+            this.design31.UseVisualStyleBackColor = false;
+            // 
             // ellipseControl1
             // 
             this.ellipseControl1.CornerRadius = 20;
             this.ellipseControl1.TargetControl = this;
-            // 
-            // txtScreen2
-            // 
-            this.txtScreen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.txtScreen2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtScreen2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtScreen2.Font = new System.Drawing.Font("Gadugi", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScreen2.ForeColor = System.Drawing.Color.White;
-            this.txtScreen2.Location = new System.Drawing.Point(0, 111);
-            this.txtScreen2.Margin = new System.Windows.Forms.Padding(0);
-            this.txtScreen2.Multiline = true;
-            this.txtScreen2.Name = "txtScreen2";
-            this.txtScreen2.Size = new System.Drawing.Size(327, 50);
-            this.txtScreen2.TabIndex = 4;
-            this.txtScreen2.Text = "0";
-            this.txtScreen2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 

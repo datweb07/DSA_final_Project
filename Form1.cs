@@ -16,8 +16,19 @@ namespace finalProject
         public Form1()
         {
             InitializeComponent();
+
+            //btnExit.MouseMove += BtnExit_MouseEnter;
+            //btnExit.MouseLeave += BtnExit_MouseLeave;
         }
 
+        //private void BtnExit_MouseEnter(object sender, EventArgs e)
+        //{
+        //    btnExit.BackColor = Color.Blue;
+        //}
+        //private void BtnExit_MouseLeave(object sender, EventArgs e)
+        //{
+        //    btnExit.BackColor = SystemColors.Window;
+        //}
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -50,9 +61,18 @@ namespace finalProject
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            if (btnExit !=  null) 
+                {
+                btnExit.BackColor = Color.Green;
+
+            }
+           
             this.Close();   
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

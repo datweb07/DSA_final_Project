@@ -39,6 +39,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.design32 = new customButton.Design();
+            this.design31 = new customButton.Design();
             this.label2 = new System.Windows.Forms.Label();
             this.txtScreen1 = new System.Windows.Forms.TextBox();
             this.design27 = new customButton.Design();
@@ -72,9 +74,7 @@
             this.design4 = new customButton.Design();
             this.design2 = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
-            this.design31 = new customButton.Design();
             this.txtScreen2 = new System.Windows.Forms.TextBox();
-            this.design32 = new customButton.Design();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnHistory.SuspendLayout();
@@ -209,6 +209,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
+            // 
+            // design32
+            // 
+            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design32.BorderRadius = 20;
+            this.design32.BorderSize = 0;
+            this.design32.FlatAppearance.BorderSize = 0;
+            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design32.ForeColor = System.Drawing.Color.White;
+            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
+            this.design32.Location = new System.Drawing.Point(9, 0);
+            this.design32.Name = "design32";
+            this.design32.Size = new System.Drawing.Size(50, 36);
+            this.design32.TabIndex = 37;
+            this.design32.TextClor = System.Drawing.Color.White;
+            this.design32.UseVisualStyleBackColor = false;
+            // 
+            // design31
+            // 
+            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design31.BorderRadius = 20;
+            this.design31.BorderSize = 0;
+            this.design31.FlatAppearance.BorderSize = 0;
+            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design31.ForeColor = System.Drawing.Color.White;
+            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
+            this.design31.Location = new System.Drawing.Point(265, 0);
+            this.design31.Name = "design31";
+            this.design31.Size = new System.Drawing.Size(50, 36);
+            this.design31.TabIndex = 36;
+            this.design31.TextClor = System.Drawing.Color.White;
+            this.design31.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -802,22 +834,6 @@
             this.ellipseControl1.CornerRadius = 20;
             this.ellipseControl1.TargetControl = this;
             // 
-            // design31
-            // 
-            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design31.BorderRadius = 20;
-            this.design31.BorderSize = 0;
-            this.design31.FlatAppearance.BorderSize = 0;
-            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design31.ForeColor = System.Drawing.Color.White;
-            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
-            this.design31.Location = new System.Drawing.Point(265, 0);
-            this.design31.Name = "design31";
-            this.design31.Size = new System.Drawing.Size(50, 36);
-            this.design31.TabIndex = 36;
-            this.design31.TextClor = System.Drawing.Color.White;
-            this.design31.UseVisualStyleBackColor = false;
-            // 
             // txtScreen2
             // 
             this.txtScreen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -833,22 +849,6 @@
             this.txtScreen2.TabIndex = 4;
             this.txtScreen2.Text = "0";
             this.txtScreen2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // design32
-            // 
-            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design32.BorderRadius = 20;
-            this.design32.BorderSize = 0;
-            this.design32.FlatAppearance.BorderSize = 0;
-            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design32.ForeColor = System.Drawing.Color.White;
-            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
-            this.design32.Location = new System.Drawing.Point(9, 0);
-            this.design32.Name = "design32";
-            this.design32.Size = new System.Drawing.Size(50, 36);
-            this.design32.TabIndex = 37;
-            this.design32.TextClor = System.Drawing.Color.White;
-            this.design32.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

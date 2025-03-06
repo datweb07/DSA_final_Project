@@ -41,6 +41,9 @@
             this.btnHistory = new System.Windows.Forms.Button();
             this.txtScreen1 = new System.Windows.Forms.TextBox();
             this.txtScreen2 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.design27 = new customButton.Design();
             this.design28 = new customButton.Design();
             this.design29 = new customButton.Design();
@@ -75,10 +78,13 @@
             this.pnHeader.SuspendLayout();
             this.pnHistory.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnHeader
             // 
+            this.pnHeader.Controls.Add(this.label1);
+            this.pnHeader.Controls.Add(this.pictureBox1);
             this.pnHeader.Controls.Add(this.button2);
             this.pnHeader.Controls.Add(this.button1);
             this.pnHeader.Controls.Add(this.btnExit);
@@ -174,6 +180,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.btnHistory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -243,11 +250,41 @@
             this.txtScreen2.Text = "0";
             this.txtScreen2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(52, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Calculator";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 34);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Team";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // design27
             // 
             this.design27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design27.BorderRadius = 20;
             this.design27.BorderSize = 0;
+            this.design27.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design27.FlatAppearance.BorderSize = 0;
             this.design27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design27.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,6 +303,7 @@
             this.design28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design28.BorderRadius = 20;
             this.design28.BorderSize = 0;
+            this.design28.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design28.FlatAppearance.BorderSize = 0;
             this.design28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design28.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -284,6 +322,7 @@
             this.design29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design29.BorderRadius = 20;
             this.design29.BorderSize = 0;
+            this.design29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design29.FlatAppearance.BorderSize = 0;
             this.design29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design29.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -302,6 +341,7 @@
             this.design30.BackColor = System.Drawing.Color.DodgerBlue;
             this.design30.BorderRadius = 20;
             this.design30.BorderSize = 0;
+            this.design30.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design30.FlatAppearance.BorderSize = 0;
             this.design30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design30.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -320,6 +360,7 @@
             this.design23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design23.BorderRadius = 20;
             this.design23.BorderSize = 0;
+            this.design23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design23.FlatAppearance.BorderSize = 0;
             this.design23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design23.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +379,7 @@
             this.design24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design24.BorderRadius = 20;
             this.design24.BorderSize = 0;
+            this.design24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design24.FlatAppearance.BorderSize = 0;
             this.design24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design24.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,6 +398,7 @@
             this.design25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design25.BorderRadius = 20;
             this.design25.BorderSize = 0;
+            this.design25.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design25.FlatAppearance.BorderSize = 0;
             this.design25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design25.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,6 +417,7 @@
             this.design26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design26.BorderRadius = 20;
             this.design26.BorderSize = 0;
+            this.design26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design26.FlatAppearance.BorderSize = 0;
             this.design26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design26.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -392,6 +436,7 @@
             this.design19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design19.BorderRadius = 20;
             this.design19.BorderSize = 0;
+            this.design19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design19.FlatAppearance.BorderSize = 0;
             this.design19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design19.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -410,6 +455,7 @@
             this.design20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design20.BorderRadius = 20;
             this.design20.BorderSize = 0;
+            this.design20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design20.FlatAppearance.BorderSize = 0;
             this.design20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design20.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,6 +474,7 @@
             this.design21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design21.BorderRadius = 20;
             this.design21.BorderSize = 0;
+            this.design21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design21.FlatAppearance.BorderSize = 0;
             this.design21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design21.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -446,6 +493,7 @@
             this.design22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design22.BorderRadius = 20;
             this.design22.BorderSize = 0;
+            this.design22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design22.FlatAppearance.BorderSize = 0;
             this.design22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design22.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -464,6 +512,7 @@
             this.design15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design15.BorderRadius = 20;
             this.design15.BorderSize = 0;
+            this.design15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design15.FlatAppearance.BorderSize = 0;
             this.design15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design15.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,6 +531,7 @@
             this.design16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design16.BorderRadius = 20;
             this.design16.BorderSize = 0;
+            this.design16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design16.FlatAppearance.BorderSize = 0;
             this.design16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design16.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -500,6 +550,7 @@
             this.design17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design17.BorderRadius = 20;
             this.design17.BorderSize = 0;
+            this.design17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design17.FlatAppearance.BorderSize = 0;
             this.design17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design17.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -518,6 +569,7 @@
             this.design18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design18.BorderRadius = 20;
             this.design18.BorderSize = 0;
+            this.design18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design18.FlatAppearance.BorderSize = 0;
             this.design18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design18.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -536,6 +588,7 @@
             this.design11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design11.BorderRadius = 20;
             this.design11.BorderSize = 0;
+            this.design11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design11.FlatAppearance.BorderSize = 0;
             this.design11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design11.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -553,6 +606,7 @@
             this.design12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design12.BorderRadius = 20;
             this.design12.BorderSize = 0;
+            this.design12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design12.FlatAppearance.BorderSize = 0;
             this.design12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design12.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -570,6 +624,7 @@
             this.design13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.design13.BorderRadius = 20;
             this.design13.BorderSize = 0;
+            this.design13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design13.FlatAppearance.BorderSize = 0;
             this.design13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design13.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -587,6 +642,7 @@
             this.design14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design14.BorderRadius = 20;
             this.design14.BorderSize = 0;
+            this.design14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design14.FlatAppearance.BorderSize = 0;
             this.design14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design14.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -605,6 +661,7 @@
             this.design10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design10.BorderRadius = 20;
             this.design10.BorderSize = 0;
+            this.design10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design10.FlatAppearance.BorderSize = 0;
             this.design10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design10.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -623,6 +680,7 @@
             this.design3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design3.BorderRadius = 20;
             this.design3.BorderSize = 0;
+            this.design3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design3.FlatAppearance.BorderSize = 0;
             this.design3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design3.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -641,6 +699,7 @@
             this.design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design1.BorderRadius = 20;
             this.design1.BorderSize = 0;
+            this.design1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design1.FlatAppearance.BorderSize = 0;
             this.design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design1.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -659,6 +718,7 @@
             this.design9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.design9.BorderRadius = 15;
             this.design9.BorderSize = 0;
+            this.design9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design9.FlatAppearance.BorderSize = 0;
             this.design9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design9.ForeColor = System.Drawing.Color.DarkGray;
@@ -676,6 +736,7 @@
             this.design8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.design8.BorderRadius = 15;
             this.design8.BorderSize = 0;
+            this.design8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design8.FlatAppearance.BorderSize = 0;
             this.design8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design8.ForeColor = System.Drawing.Color.DarkGray;
@@ -693,6 +754,7 @@
             this.design7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.design7.BorderRadius = 15;
             this.design7.BorderSize = 0;
+            this.design7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design7.FlatAppearance.BorderSize = 0;
             this.design7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design7.ForeColor = System.Drawing.Color.DarkGray;
@@ -710,6 +772,7 @@
             this.design6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.design6.BorderRadius = 15;
             this.design6.BorderSize = 0;
+            this.design6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design6.FlatAppearance.BorderSize = 0;
             this.design6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design6.ForeColor = System.Drawing.Color.DarkGray;
@@ -727,6 +790,7 @@
             this.design5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.design5.BorderRadius = 15;
             this.design5.BorderSize = 0;
+            this.design5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design5.FlatAppearance.BorderSize = 0;
             this.design5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design5.ForeColor = System.Drawing.Color.DarkGray;
@@ -744,6 +808,7 @@
             this.design4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.design4.BorderRadius = 15;
             this.design4.BorderSize = 0;
+            this.design4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design4.FlatAppearance.BorderSize = 0;
             this.design4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design4.ForeColor = System.Drawing.Color.DarkGray;
@@ -761,6 +826,7 @@
             this.design2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.design2.BorderRadius = 20;
             this.design2.BorderSize = 0;
+            this.design2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.design2.FlatAppearance.BorderSize = 0;
             this.design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design2.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -829,6 +895,7 @@
             this.pnHeader.ResumeLayout(false);
             this.pnHistory.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,6 +946,9 @@
         private customButton.Design design28;
         private customButton.Design design29;
         private customButton.Design design30;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

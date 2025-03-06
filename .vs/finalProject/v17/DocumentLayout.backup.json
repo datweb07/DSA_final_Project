@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|c:\\users\\thanh dat\\source\\repos\\finalproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|c:\\users\\thanh dat\\source\\repos\\finalproject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,10 +44,9 @@
               "RelativeDocumentMoniker": "EllipseControl.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\EllipseControl.cs",
               "RelativeToolTip": "EllipseControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T17:03:08.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T17:03:08.507Z"
             },
             {
               "$type": "Document",
@@ -57,10 +56,9 @@
               "RelativeDocumentMoniker": "Design.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Design.cs",
               "RelativeToolTip": "Design.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T17:03:05.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T17:03:05.783Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,8 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
+              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
               "ViewState": "AgIAAA8AAAAAAAAAAAApwDQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T12:25:59.195Z",
@@ -81,8 +79,8 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T12:21:15.113Z",
               "EditorCaption": " [Design]"

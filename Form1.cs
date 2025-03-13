@@ -13,22 +13,11 @@ namespace finalProject
 {
     public partial class Form1: Form
     {
+        bool enterValue = false;
         public Form1()
         {
             InitializeComponent();
-
-            //btnExit.MouseMove += BtnExit_MouseEnter;
-            //btnExit.MouseLeave += BtnExit_MouseLeave;
         }
-
-        //private void BtnExit_MouseEnter(object sender, EventArgs e)
-        //{
-        //    btnExit.BackColor = Color.Blue;
-        //}
-        //private void BtnExit_MouseLeave(object sender, EventArgs e)
-        //{
-        //    btnExit.BackColor = SystemColors.Window;
-        //}
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -44,17 +33,18 @@ namespace finalProject
 
         }
 
-        private void design10_Click(object sender, EventArgs e)
+        private void btnC_Click(object sender, EventArgs e)
         {
-
+            txtScreenResult.Text = "0";
+            txtScreenExpression.Text = string.Empty;
         }
 
-        private void design3_Click(object sender, EventArgs e)
+        private void btnCE_Click(object sender, EventArgs e)
         {
-
+            txtScreenResult.Text = "0";
         }
 
-        private void design1_Click(object sender, EventArgs e)
+        private void btnPercent_Click(object sender, EventArgs e)
         {
 
         }
@@ -73,6 +63,49 @@ namespace finalProject
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtScreenResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNumber_Click(object sender, EventArgs e)
+        {
+            if (txtScreenResult.Text == "0" || enterValue)
+            {
+                txtScreenResult.Text = string.Empty;
+            }
+            enterValue = false;
+            customButton.Design btn = (customButton.Design)sender;
+            if (btn.Text == ".")
+            {
+                if (!txtScreenResult.Text.Contains("."))
+                {
+                    txtScreenResult.Text = txtScreenResult.Text + btn.Text;
+                }
+            }
+            else
+            {
+                txtScreenResult.Text = txtScreenResult.Text + btn.Text;
+            }
+        }
+
+        private void btnOperator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtScreenResult.Text.Length > 0)
+            {
+                txtScreenResult.Text = txtScreenResult.Text.Remove(txtScreenResult.Text.Length - 1, 1);
+            }
+            if (txtScreenResult.Text == string.Empty)
+            {
+                txtScreenResult.Text = "0";
+            }
         }
     }
 }

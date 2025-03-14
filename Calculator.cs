@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace finalProject
 {
-    public class Main
+    public class Calculator
     {
         public static string InfixToPostFix(string infix)
         {
@@ -46,7 +46,7 @@ namespace finalProject
             }
             return postfix;
         }
-
+        
         public static int Precedence(char token)
         {
             if (token == '+' || token == '-')

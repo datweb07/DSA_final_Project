@@ -28,11 +28,6 @@ namespace finalProject
 
         }
 
-        private void design2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnC_Click(object sender, EventArgs e)
         {
             txtScreenResult.Text = "0";
@@ -51,18 +46,7 @@ namespace finalProject
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (btnExit !=  null) 
-                {
-                btnExit.BackColor = Color.Green;
-
-            }
-           
-            this.Close();   
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
 
         private void txtScreenResult_TextChanged(object sender, EventArgs e)
@@ -93,7 +77,13 @@ namespace finalProject
 
         private void btnOperator_Click(object sender, EventArgs e)
         {
-
+            customButton.Design btn = (customButton.Design)sender;
+            if (!string.IsNullOrEmpty(txtScreenResult.Text) &&txtScreenResult.Text != "0")
+            {
+                txtScreenExpression.Text += txtScreenResult.Text + " " + btn.Text + " ";
+                enterValue = true;
+                txtScreenResult.Text = "0";
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -113,7 +113,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button2
             // 
@@ -401,7 +400,7 @@
             this.design24.Text = "2";
             this.design24.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design24.UseVisualStyleBackColor = false;
-            this.design24.Click += new System.EventHandler(this.btnOperator_Click);
+            this.design24.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design25
             // 
@@ -636,7 +635,7 @@
             this.design12.Name = "design12";
             this.design12.Size = new System.Drawing.Size(70, 50);
             this.design12.TabIndex = 18;
-            this.design12.Text = "x2";
+            this.design12.Text = "^2";
             this.design12.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design12.UseVisualStyleBackColor = false;
             this.design12.Click += new System.EventHandler(this.btnNumber_Click);
@@ -650,12 +649,12 @@
             this.design13.FlatAppearance.BorderSize = 0;
             this.design13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.design13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design13.Location = new System.Drawing.Point(10, 288);
+            this.design13.Location = new System.Drawing.Point(11, 288);
             this.design13.Margin = new System.Windows.Forms.Padding(0);
             this.design13.Name = "design13";
             this.design13.Size = new System.Drawing.Size(70, 50);
             this.design13.TabIndex = 17;
-            this.design13.Text = "%";
+            this.design13.Text = "1/x";
             this.design13.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design13.UseVisualStyleBackColor = false;
             this.design13.Click += new System.EventHandler(this.btnNumber_Click);

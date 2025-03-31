@@ -39,6 +39,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.design32 = new customButton.Design();
+            this.design31 = new customButton.Design();
             this.label2 = new System.Windows.Forms.Label();
             this.txtScreenExpression = new System.Windows.Forms.TextBox();
             this.txtScreenResult = new System.Windows.Forms.TextBox();
@@ -72,8 +74,6 @@
             this.design5 = new customButton.Design();
             this.design4 = new customButton.Design();
             this.btnDelete = new customButton.Design();
-            this.design32 = new customButton.Design();
-            this.design31 = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -209,6 +209,38 @@
             this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
             // 
+            // design32
+            // 
+            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design32.BorderRadius = 20;
+            this.design32.BorderSize = 0;
+            this.design32.FlatAppearance.BorderSize = 0;
+            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design32.ForeColor = System.Drawing.Color.White;
+            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
+            this.design32.Location = new System.Drawing.Point(9, 0);
+            this.design32.Name = "design32";
+            this.design32.Size = new System.Drawing.Size(50, 36);
+            this.design32.TabIndex = 37;
+            this.design32.TextClor = System.Drawing.Color.White;
+            this.design32.UseVisualStyleBackColor = false;
+            // 
+            // design31
+            // 
+            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design31.BorderRadius = 20;
+            this.design31.BorderSize = 0;
+            this.design31.FlatAppearance.BorderSize = 0;
+            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design31.ForeColor = System.Drawing.Color.White;
+            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
+            this.design31.Location = new System.Drawing.Point(265, 0);
+            this.design31.Name = "design31";
+            this.design31.Size = new System.Drawing.Size(50, 36);
+            this.design31.TabIndex = 36;
+            this.design31.TextClor = System.Drawing.Color.White;
+            this.design31.UseVisualStyleBackColor = false;
+            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,7 +302,7 @@
             this.design27.Text = ".";
             this.design27.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design27.UseVisualStyleBackColor = false;
-            this.design27.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design27.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design28
             // 
@@ -290,7 +322,7 @@
             this.design28.Text = "0";
             this.design28.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design28.UseVisualStyleBackColor = false;
-            this.design28.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design28.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design29
             // 
@@ -349,7 +381,7 @@
             this.design23.Text = "3";
             this.design23.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design23.UseVisualStyleBackColor = false;
-            this.design23.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design23.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design24
             // 
@@ -369,7 +401,7 @@
             this.design24.Text = "2";
             this.design24.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design24.UseVisualStyleBackColor = false;
-            this.design24.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design24.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design25
             // 
@@ -389,7 +421,7 @@
             this.design25.Text = "1";
             this.design25.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design25.UseVisualStyleBackColor = false;
-            this.design25.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design25.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design26
             // 
@@ -429,7 +461,7 @@
             this.design19.Text = "6";
             this.design19.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design19.UseVisualStyleBackColor = false;
-            this.design19.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design19.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design20
             // 
@@ -449,7 +481,7 @@
             this.design20.Text = "5";
             this.design20.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design20.UseVisualStyleBackColor = false;
-            this.design20.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design20.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design21
             // 
@@ -469,7 +501,7 @@
             this.design21.Text = "4";
             this.design21.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design21.UseVisualStyleBackColor = false;
-            this.design21.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design21.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design22
             // 
@@ -509,7 +541,7 @@
             this.design15.Text = "9";
             this.design15.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design15.UseVisualStyleBackColor = false;
-            this.design15.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design15.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design16
             // 
@@ -529,7 +561,7 @@
             this.design16.Text = "8";
             this.design16.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design16.UseVisualStyleBackColor = false;
-            this.design16.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design16.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design17
             // 
@@ -549,7 +581,7 @@
             this.design17.Text = "7";
             this.design17.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design17.UseVisualStyleBackColor = false;
-            this.design17.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design17.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design18
             // 
@@ -588,7 +620,7 @@
             this.design11.Text = "√";
             this.design11.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design11.UseVisualStyleBackColor = false;
-            this.design11.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design11.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design12
             // 
@@ -607,7 +639,7 @@
             this.design12.Text = "^2";
             this.design12.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design12.UseVisualStyleBackColor = false;
-            this.design12.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design12.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design13
             // 
@@ -626,7 +658,7 @@
             this.design13.Text = "1/x";
             this.design13.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design13.UseVisualStyleBackColor = false;
-            this.design13.Click += new System.EventHandler(this.btnOperand_Click);
+            this.design13.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design14
             // 
@@ -684,7 +716,7 @@
             this.bntClosedParentheses.Text = ")";
             this.bntClosedParentheses.TextClor = System.Drawing.Color.WhiteSmoke;
             this.bntClosedParentheses.UseVisualStyleBackColor = false;
-            this.bntClosedParentheses.Click += new System.EventHandler(this.btnOperand_Click);
+            this.bntClosedParentheses.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // btnOpenParentheses
             // 
@@ -703,7 +735,7 @@
             this.btnOpenParentheses.Text = "(";
             this.btnOpenParentheses.TextClor = System.Drawing.Color.WhiteSmoke;
             this.btnOpenParentheses.UseVisualStyleBackColor = false;
-            this.btnOpenParentheses.Click += new System.EventHandler(this.btnOperand_Click);
+            this.btnOpenParentheses.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design9
             // 
@@ -831,38 +863,6 @@
             this.btnDelete.TextClor = System.Drawing.Color.WhiteSmoke;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // design32
-            // 
-            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design32.BorderRadius = 20;
-            this.design32.BorderSize = 0;
-            this.design32.FlatAppearance.BorderSize = 0;
-            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design32.ForeColor = System.Drawing.Color.White;
-            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
-            this.design32.Location = new System.Drawing.Point(9, 0);
-            this.design32.Name = "design32";
-            this.design32.Size = new System.Drawing.Size(50, 36);
-            this.design32.TabIndex = 37;
-            this.design32.TextClor = System.Drawing.Color.White;
-            this.design32.UseVisualStyleBackColor = false;
-            // 
-            // design31
-            // 
-            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design31.BorderRadius = 20;
-            this.design31.BorderSize = 0;
-            this.design31.FlatAppearance.BorderSize = 0;
-            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design31.ForeColor = System.Drawing.Color.White;
-            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
-            this.design31.Location = new System.Drawing.Point(265, 0);
-            this.design31.Name = "design31";
-            this.design31.Size = new System.Drawing.Size(50, 36);
-            this.design31.TabIndex = 36;
-            this.design31.TextClor = System.Drawing.Color.White;
-            this.design31.UseVisualStyleBackColor = false;
             // 
             // ellipseControl1
             // 

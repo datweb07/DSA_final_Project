@@ -39,8 +39,6 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.design32 = new customButton.Design();
-            this.design31 = new customButton.Design();
             this.label2 = new System.Windows.Forms.Label();
             this.txtScreenExpression = new System.Windows.Forms.TextBox();
             this.txtScreenResult = new System.Windows.Forms.TextBox();
@@ -65,8 +63,8 @@
             this.design13 = new customButton.Design();
             this.design14 = new customButton.Design();
             this.btnC = new customButton.Design();
-            this.bntCE = new customButton.Design();
-            this.btnPercent = new customButton.Design();
+            this.bntClosedParentheses = new customButton.Design();
+            this.btnOpenParentheses = new customButton.Design();
             this.design9 = new customButton.Design();
             this.design8 = new customButton.Design();
             this.design7 = new customButton.Design();
@@ -74,6 +72,8 @@
             this.design5 = new customButton.Design();
             this.design4 = new customButton.Design();
             this.btnDelete = new customButton.Design();
+            this.design32 = new customButton.Design();
+            this.design31 = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -209,38 +209,6 @@
             this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
             // 
-            // design32
-            // 
-            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design32.BorderRadius = 20;
-            this.design32.BorderSize = 0;
-            this.design32.FlatAppearance.BorderSize = 0;
-            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design32.ForeColor = System.Drawing.Color.White;
-            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
-            this.design32.Location = new System.Drawing.Point(9, 0);
-            this.design32.Name = "design32";
-            this.design32.Size = new System.Drawing.Size(50, 36);
-            this.design32.TabIndex = 37;
-            this.design32.TextClor = System.Drawing.Color.White;
-            this.design32.UseVisualStyleBackColor = false;
-            // 
-            // design31
-            // 
-            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design31.BorderRadius = 20;
-            this.design31.BorderSize = 0;
-            this.design31.FlatAppearance.BorderSize = 0;
-            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design31.ForeColor = System.Drawing.Color.White;
-            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
-            this.design31.Location = new System.Drawing.Point(265, 0);
-            this.design31.Name = "design31";
-            this.design31.Size = new System.Drawing.Size(50, 36);
-            this.design31.TabIndex = 36;
-            this.design31.TextClor = System.Drawing.Color.White;
-            this.design31.UseVisualStyleBackColor = false;
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -302,7 +270,7 @@
             this.design27.Text = ".";
             this.design27.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design27.UseVisualStyleBackColor = false;
-            this.design27.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design27.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design28
             // 
@@ -322,7 +290,7 @@
             this.design28.Text = "0";
             this.design28.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design28.UseVisualStyleBackColor = false;
-            this.design28.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design28.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design29
             // 
@@ -361,6 +329,7 @@
             this.design30.Text = "=";
             this.design30.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design30.UseVisualStyleBackColor = false;
+            this.design30.Click += new System.EventHandler(this.btnEqual_Click);
             // 
             // design23
             // 
@@ -380,7 +349,7 @@
             this.design23.Text = "3";
             this.design23.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design23.UseVisualStyleBackColor = false;
-            this.design23.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design23.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design24
             // 
@@ -400,7 +369,7 @@
             this.design24.Text = "2";
             this.design24.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design24.UseVisualStyleBackColor = false;
-            this.design24.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design24.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design25
             // 
@@ -420,7 +389,7 @@
             this.design25.Text = "1";
             this.design25.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design25.UseVisualStyleBackColor = false;
-            this.design25.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design25.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design26
             // 
@@ -460,7 +429,7 @@
             this.design19.Text = "6";
             this.design19.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design19.UseVisualStyleBackColor = false;
-            this.design19.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design19.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design20
             // 
@@ -480,7 +449,7 @@
             this.design20.Text = "5";
             this.design20.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design20.UseVisualStyleBackColor = false;
-            this.design20.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design20.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design21
             // 
@@ -500,7 +469,7 @@
             this.design21.Text = "4";
             this.design21.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design21.UseVisualStyleBackColor = false;
-            this.design21.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design21.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design22
             // 
@@ -540,7 +509,7 @@
             this.design15.Text = "9";
             this.design15.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design15.UseVisualStyleBackColor = false;
-            this.design15.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design15.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design16
             // 
@@ -560,7 +529,7 @@
             this.design16.Text = "8";
             this.design16.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design16.UseVisualStyleBackColor = false;
-            this.design16.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design16.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design17
             // 
@@ -580,7 +549,7 @@
             this.design17.Text = "7";
             this.design17.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design17.UseVisualStyleBackColor = false;
-            this.design17.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design17.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design18
             // 
@@ -597,7 +566,7 @@
             this.design18.Name = "design18";
             this.design18.Size = new System.Drawing.Size(70, 50);
             this.design18.TabIndex = 20;
-            this.design18.Text = "×";
+            this.design18.Text = "*";
             this.design18.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design18.UseVisualStyleBackColor = false;
             this.design18.Click += new System.EventHandler(this.btnOperator_Click);
@@ -619,7 +588,7 @@
             this.design11.Text = "√";
             this.design11.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design11.UseVisualStyleBackColor = false;
-            this.design11.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design11.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design12
             // 
@@ -638,7 +607,7 @@
             this.design12.Text = "^2";
             this.design12.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design12.UseVisualStyleBackColor = false;
-            this.design12.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design12.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design13
             // 
@@ -657,7 +626,7 @@
             this.design13.Text = "1/x";
             this.design13.TextClor = System.Drawing.Color.WhiteSmoke;
             this.design13.UseVisualStyleBackColor = false;
-            this.design13.Click += new System.EventHandler(this.btnNumber_Click);
+            this.design13.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design14
             // 
@@ -698,43 +667,43 @@
             this.btnC.UseVisualStyleBackColor = false;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
-            // bntCE
+            // bntClosedParentheses
             // 
-            this.bntCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.bntCE.BorderRadius = 20;
-            this.bntCE.BorderSize = 0;
-            this.bntCE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntCE.FlatAppearance.BorderSize = 0;
-            this.bntCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntCE.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bntCE.Location = new System.Drawing.Point(89, 227);
-            this.bntCE.Margin = new System.Windows.Forms.Padding(0);
-            this.bntCE.Name = "bntCE";
-            this.bntCE.Size = new System.Drawing.Size(70, 50);
-            this.bntCE.TabIndex = 14;
-            this.bntCE.Text = "CE";
-            this.bntCE.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.bntCE.UseVisualStyleBackColor = false;
-            this.bntCE.Click += new System.EventHandler(this.btnCE_Click);
+            this.bntClosedParentheses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.bntClosedParentheses.BorderRadius = 20;
+            this.bntClosedParentheses.BorderSize = 0;
+            this.bntClosedParentheses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bntClosedParentheses.FlatAppearance.BorderSize = 0;
+            this.bntClosedParentheses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntClosedParentheses.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bntClosedParentheses.Location = new System.Drawing.Point(89, 227);
+            this.bntClosedParentheses.Margin = new System.Windows.Forms.Padding(0);
+            this.bntClosedParentheses.Name = "bntClosedParentheses";
+            this.bntClosedParentheses.Size = new System.Drawing.Size(70, 50);
+            this.bntClosedParentheses.TabIndex = 14;
+            this.bntClosedParentheses.Text = ")";
+            this.bntClosedParentheses.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.bntClosedParentheses.UseVisualStyleBackColor = false;
+            this.bntClosedParentheses.Click += new System.EventHandler(this.btnOperand_Click);
             // 
-            // btnPercent
+            // btnOpenParentheses
             // 
-            this.btnPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.btnPercent.BorderRadius = 20;
-            this.btnPercent.BorderSize = 0;
-            this.btnPercent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPercent.FlatAppearance.BorderSize = 0;
-            this.btnPercent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPercent.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPercent.Location = new System.Drawing.Point(9, 227);
-            this.btnPercent.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercent.Name = "btnPercent";
-            this.btnPercent.Size = new System.Drawing.Size(70, 50);
-            this.btnPercent.TabIndex = 13;
-            this.btnPercent.Text = "%";
-            this.btnPercent.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.btnPercent.UseVisualStyleBackColor = false;
-            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
+            this.btnOpenParentheses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnOpenParentheses.BorderRadius = 20;
+            this.btnOpenParentheses.BorderSize = 0;
+            this.btnOpenParentheses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenParentheses.FlatAppearance.BorderSize = 0;
+            this.btnOpenParentheses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenParentheses.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnOpenParentheses.Location = new System.Drawing.Point(9, 227);
+            this.btnOpenParentheses.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOpenParentheses.Name = "btnOpenParentheses";
+            this.btnOpenParentheses.Size = new System.Drawing.Size(70, 50);
+            this.btnOpenParentheses.TabIndex = 13;
+            this.btnOpenParentheses.Text = "(";
+            this.btnOpenParentheses.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnOpenParentheses.UseVisualStyleBackColor = false;
+            this.btnOpenParentheses.Click += new System.EventHandler(this.btnOperand_Click);
             // 
             // design9
             // 
@@ -863,6 +832,38 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // design32
+            // 
+            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design32.BorderRadius = 20;
+            this.design32.BorderSize = 0;
+            this.design32.FlatAppearance.BorderSize = 0;
+            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design32.ForeColor = System.Drawing.Color.White;
+            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
+            this.design32.Location = new System.Drawing.Point(9, 0);
+            this.design32.Name = "design32";
+            this.design32.Size = new System.Drawing.Size(50, 36);
+            this.design32.TabIndex = 37;
+            this.design32.TextClor = System.Drawing.Color.White;
+            this.design32.UseVisualStyleBackColor = false;
+            // 
+            // design31
+            // 
+            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design31.BorderRadius = 20;
+            this.design31.BorderSize = 0;
+            this.design31.FlatAppearance.BorderSize = 0;
+            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design31.ForeColor = System.Drawing.Color.White;
+            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
+            this.design31.Location = new System.Drawing.Point(265, 0);
+            this.design31.Name = "design31";
+            this.design31.Size = new System.Drawing.Size(50, 36);
+            this.design31.TabIndex = 36;
+            this.design31.TextClor = System.Drawing.Color.White;
+            this.design31.UseVisualStyleBackColor = false;
+            // 
             // ellipseControl1
             // 
             this.ellipseControl1.CornerRadius = 20;
@@ -894,8 +895,8 @@
             this.Controls.Add(this.design13);
             this.Controls.Add(this.design14);
             this.Controls.Add(this.btnC);
-            this.Controls.Add(this.bntCE);
-            this.Controls.Add(this.btnPercent);
+            this.Controls.Add(this.bntClosedParentheses);
+            this.Controls.Add(this.btnOpenParentheses);
             this.Controls.Add(this.design9);
             this.Controls.Add(this.design8);
             this.Controls.Add(this.design7);
@@ -944,8 +945,8 @@
         private customButton.Design design5;
         private customButton.Design design4;
         private customButton.Design btnC;
-        private customButton.Design bntCE;
-        private customButton.Design btnPercent;
+        private customButton.Design bntClosedParentheses;
+        private customButton.Design btnOpenParentheses;
         private customButton.Design design11;
         private customButton.Design design12;
         private customButton.Design design13;

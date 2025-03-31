@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace finalProject
 {
-    class SpecialCalculator
+    public class SpecialCalculator
     {
-
+        
     }
 }

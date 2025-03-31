@@ -3,102 +3,181 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace finalProject
 {
     public class Calculator
     {
-        public static string InfixToPostFix(string infix)
+        public class Node
         {
-            string postfix = "";
-            Stack<char> stack = new Stack<char>();
-            for (int i = 0; i < infix.Length; i++)
-            {
-                char token = infix[i];
-                if (char.IsDigit(token))
-                {
-                    postfix += token;
-                }
-                else if (token == '(')
-                {
-                    stack.Push(token);
-                }
-                else if (token == ')')
-                {
-                    while (stack.Count > 0 && stack.Peek() != '(')
-                    {
-                        postfix += stack.Pop();
-                    }
-                    stack.Pop();
-                }
-                else
-                {
-                    while (stack.Count > 0 && Precedence(stack.Peek()) >= Precedence(token))
-                    {
-                        postfix += stack.Pop();
-                    }
-                    stack.Push(token);
-                }
-            }
-            while (stack.Count > 0)
-            {
-                postfix += stack.Pop();
-            }
-            return postfix;
+            public Node next;
+            public object data;
         }
-        
-        public static int Precedence(char token)
+
+        public class MyStack<T>
         {
-            if (token == '+' || token == '-')
+            private Node top;
+
+            public bool IsEmpty()
             {
-                return 1;
+                return top == null;
             }
-            else if (token == '*' || token == '/')
+
+            public void Push(object ele)
             {
-                return 2;
+                Node n = new Node();
+                n.data = ele;
+                n.next = top;
+                top = n;
             }
-            else
+
+            public Node Pop()
             {
-                return 0;
+                if (top == null)
+                    return null;
+                Node d = top;
+                top = top.next;
+                return d;
+            }
+
+            public object Peek()
+            {
+                return top.data;
+            }
+
+            public int Count()
+            {
+                int count = 0;
+                Node current = top;
+                while (current != null)
+                {
+                    count++;
+                    current = current.next;
+                }
+                return count;
             }
         }
 
-        public static double EvaluatePostfix(string postfix)
+        public static int GetPrecedence(char c)
         {
-            Stack<double> stack = new Stack<double>();
-            for (int i = 0; i < postfix.Length; i++)
+            switch (c)
             {
-                char token = postfix[i];
-                if (char.IsDigit(token))
+                case '^': return 3;
+                case '×':
+                case '÷': return 2;
+                case '+':
+                case '-': return 1;
+                default: return 0;
+            }
+        }
+
+        public static string InfixToPostfix(string infix)
+        {
+            MyStack<char> stack = new MyStack<char>();
+            List<string> postFix = new List<string>();
+            bool lastWasDigit = false;
+
+            foreach (char c in infix)
+            {
+                if (char.IsDigit(c) || c == '.')
                 {
-                    stack.Push(token - '0');
+                    postFix.Add(c.ToString());
+                    lastWasDigit = true;
                 }
                 else
                 {
-                    double operand2 = stack.Pop();
-                    double operand1 = stack.Pop();
-                    double result = ApplyOperation(token, operand1, operand2);
+                    if (lastWasDigit)
+                    {
+                        postFix.Add(" ");
+                        lastWasDigit = false;
+                    }
+
+                    if (c == '(')
+                    {
+                        stack.Push(c);
+                    }
+                    else if (c == ')')
+                    {
+                        while (stack.Count() > 0 && (char)stack.Peek() != '(')
+                        {
+                            postFix.Add(stack.Pop().data.ToString());
+                        }
+                        stack.Pop();
+                    }
+                    else if (c != ' ')
+                    {
+                        while (stack.Count() > 0 && GetPrecedence((char)stack.Peek()) >= GetPrecedence(c))
+                        {
+                            postFix.Add(stack.Pop().data.ToString());
+                        }
+                        stack.Push(c);
+                    }
+                }
+            }
+
+            if (lastWasDigit) postFix.Add(" ");
+
+            while (stack.Count() > 0)
+            {
+                postFix.Add(stack.Pop().data.ToString());
+            }
+
+            return string.Join("", postFix);
+        }
+
+        public static double EvaluatePostfix(string postFix)
+        {
+            Stack<double> stack = new Stack<double>();
+            string currentNumber = "";
+
+            for (int i = 0; i < postFix.Length; i++)
+            {
+                char ch = postFix[i];
+
+                if (char.IsDigit(ch) || ch == '.')
+                {
+                    currentNumber += ch;
+                }
+                else if (ch == ' ')
+                {
+                    if (currentNumber != "")
+                    {
+                        stack.Push(double.Parse(currentNumber));
+                        currentNumber = "";
+                    }
+                }
+                else  // Toán tử
+                {
+                    if (stack.Count < 2)
+                        throw new InvalidOperationException("Not enough operands for operator");
+
+                    double second_op = stack.Pop();
+                    double first_op = stack.Pop();
+                    double result = 0;
+
+                    switch (ch)
+                    {
+                        case '+': result = first_op + second_op; break;
+                        case '-': result = first_op - second_op; break;
+                        case '×': result = first_op * second_op; break;
+                        case '÷':
+                            if (second_op == 0)
+                                throw new DivideByZeroException();
+                            result = first_op / second_op; break;
+                        default: throw new ArgumentException($"Invalid operator: {ch}");
+                    }
                     stack.Push(result);
                 }
             }
-            return stack.Pop();
-        }
 
-        public static double ApplyOperation(char operation, double operand1, double operand2)
-        {
-            switch (operation)
-            {
-                case '+':
-                    return operand1 + operand2;
-                case '-':
-                    return operand1 - operand2;
-                case '*':
-                    return operand1 * operand2;
-                case '/':
-                    return operand1 / operand2;
-                default:
-                    return 0;
-            }
+            if (currentNumber != "")
+                stack.Push(double.Parse(currentNumber));
+
+            if (stack.Count != 1)
+                throw new InvalidOperationException("Invalid expression");
+
+            return stack.Pop();
         }
     }
 }

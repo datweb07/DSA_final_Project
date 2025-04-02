@@ -11,19 +11,15 @@ using System.Drawing.Drawing2D;
 
 namespace finalProject
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
-        bool enterValue = false;
-        private string lastResult = "";
-        private string lastOperator = "";
-        private string lastOperand = "";
         public Form1()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pnHistory_Paint(object sender, PaintEventArgs e)
@@ -54,11 +50,10 @@ namespace finalProject
 
         private void btnNumber_Click(object sender, EventArgs e)
         {
-            if (txtScreenResult.Text == "0" || enterValue)
+            if (txtScreenResult.Text == "0")
             {
                 txtScreenResult.Text = string.Empty;
             }
-            enterValue = false;
             customButton.Design btn = (customButton.Design)sender;
             if (btn.Text == ".")
             {
@@ -86,7 +81,6 @@ namespace finalProject
                 {
                     txtScreenExpression.Text += txtScreenResult.Text + " " + btn.Text + " ";
                 }
-                enterValue = true;
                 txtScreenResult.Text = "0";
             }
         }
@@ -107,58 +101,36 @@ namespace finalProject
         {
             try
             {
-                // Nếu không có biểu thức và chưa nhập số, không làm gì
-                if (string.IsNullOrEmpty(txtScreenExpression.Text) && txtScreenResult.Text == "0")
-                    return;
-
                 string infixExpression;
-
-                // Nếu đang nhập biểu thức (có toán tử cuối)
-                if (!string.IsNullOrEmpty(txtScreenExpression.Text))
+                //kiểm tra với việc tính toán liên tục
+                if (!string.IsNullOrEmpty(txtScreenExpression.Text) && txtScreenExpression.Text.Contains("="))
                 {
-                    infixExpression = $"{txtScreenExpression.Text}{txtScreenResult.Text}";
-                }
-                // Nếu chỉ nhập số rồi bấm = (tính lại kết quả trước đó)
-                else if (!string.IsNullOrEmpty(lastResult))
-                {
-                    infixExpression = $"{txtScreenResult.Text} {lastOperator}{lastOperand}";
+                    string last = txtScreenExpression.Text.Split('=').Last().Trim();
+                    infixExpression = $"{last} {txtScreenResult.Text}";
                 }
                 else
                 {
-                    infixExpression = txtScreenResult.Text;
+                    //tính toán bình thường
+                    infixExpression = $"{txtScreenExpression.Text}{txtScreenResult.Text}";   //gắn biểu thức cần tính toán của hai màn hình
                 }
 
                 string postfixExpression = Calculator.InfixToPostfix(infixExpression);
                 MessageBox.Show(postfixExpression);
                 double result = Calculator.EvaluatePostfix(postfixExpression);
 
-                // Lưu lại toán tử và toán hạng cho tính toán tiếp theo
-                if (!string.IsNullOrEmpty(txtScreenExpression.Text))
-                {
-                    lastOperator = txtScreenExpression.Text.Trim().Split(' ').Last();
-                    lastOperand = txtScreenResult.Text;
-                }
-
-                lastResult = result.ToString();
-                txtScreenExpression.Text = $"{infixExpression} =";
-                txtScreenResult.Text = FormatResult(result);
-                enterValue = true;
+                txtScreenExpression.Text = $"{infixExpression} = ";
+                txtScreenResult.Text = result.ToString();
             }
             catch (DivideByZeroException)
             {
                 txtScreenResult.Text = "Cannot divide";
+                txtScreenExpression.Text = string.Empty;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi Tính Toán",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnC_Click(sender, e);
             }
-        }
-        private string FormatResult(double result)
-        {
-            // Hiển thị số nguyên không có phần thập phân nếu là số nguyên
-            return result % 1 == 0 ? result.ToString("0") : result.ToString("0.##########");
         }
     }
 }

@@ -102,12 +102,15 @@ namespace finalProject
             try
             {
                 string infixExpression;
+                customButton.Design btn = (customButton.Design)sender;
                 //kiểm tra với việc tính toán liên tục
                 if (!string.IsNullOrEmpty(txtScreenExpression.Text) && txtScreenExpression.Text.Contains("="))
                 {
                     string last = txtScreenExpression.Text.Split('=').Last().Trim();
                     infixExpression = $"{last} {txtScreenResult.Text}";
+                    txtScreenExpression.Text = infixExpression;
                 }
+
                 else
                 {
                     //tính toán bình thường

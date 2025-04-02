@@ -50,11 +50,16 @@ namespace finalProject
 
         private void btnNumber_Click(object sender, EventArgs e)
         {
+            customButton.Design btn = (customButton.Design)sender;
             if (txtScreenResult.Text == "0")
             {
                 txtScreenResult.Text = string.Empty;
             }
-            customButton.Design btn = (customButton.Design)sender;
+            else  //tính bình phương
+            {
+                txtScreenResult.Text = txtScreenResult.Text + "";
+            }
+
             if (btn.Text == ".")
             {
                 if (!txtScreenResult.Text.Contains("."))
@@ -102,15 +107,12 @@ namespace finalProject
             try
             {
                 string infixExpression;
-                customButton.Design btn = (customButton.Design)sender;
                 //kiểm tra với việc tính toán liên tục
                 if (!string.IsNullOrEmpty(txtScreenExpression.Text) && txtScreenExpression.Text.Contains("="))
                 {
                     string last = txtScreenExpression.Text.Split('=').Last().Trim();
                     infixExpression = $"{last} {txtScreenResult.Text}";
-                    txtScreenExpression.Text = infixExpression;
                 }
-
                 else
                 {
                     //tính toán bình thường

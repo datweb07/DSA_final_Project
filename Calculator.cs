@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,7 @@ namespace finalProject
         {
             switch (c)
             {
+                case '√': return 4;
                 case '^': return 3;
                 case '×':
                 case '÷': return 2;
@@ -149,25 +151,39 @@ namespace finalProject
                 }
                 else  // Toán tử
                 {
-                    if (stack.Count < 2)
-                        throw new InvalidOperationException("Not enough operands for operator");
-
-                    double second_op = stack.Pop();
-                    double first_op = stack.Pop();
-                    double result = 0;
-
-                    switch (ch)
+                    if (ch == '√')
                     {
-                        case '+': result = first_op + second_op; break;
-                        case '-': result = first_op - second_op; break;
-                        case '×': result = first_op * second_op; break;
-                        case '÷':
-                            if (second_op == 0)
-                                throw new DivideByZeroException();
-                            result = first_op / second_op; break;
-                        default: throw new ArgumentException($"Invalid operator: {ch}");
+                        if (stack.Count() < 1)
+                            throw new InvalidOperationException("Not enough operand");
+                        double eleSpq = stack.Pop();
+                        if (eleSpq < 0)
+                            throw new ArgumentException("Negative number");
+                        stack.Push(Math.Sqrt(eleSpq));
                     }
-                    stack.Push(result);
+                    else
+                    {
+                        if (stack.Count < 2)
+                            throw new InvalidOperationException("Not enough operands for operator");
+
+                        double second_op = stack.Pop();
+                        double first_op = stack.Pop();
+                        double result = 0;
+
+                        switch (ch)
+                        {
+                            case '√': result = Math.Sqrt(first_op); break;
+                            case '^': result = Math.Pow(first_op, second_op); break;
+                            case '+': result = first_op + second_op; break;
+                            case '-': result = first_op - second_op; break;
+                            case '×': result = first_op * second_op; break;
+                            case '÷':
+                                if (second_op == 0)
+                                    throw new DivideByZeroException();
+                                result = first_op / second_op; break;
+                            default: throw new ArgumentException($"Invalid operator: {ch}");
+                        }
+                        stack.Push(result);
+                    }
                 }
             }
 

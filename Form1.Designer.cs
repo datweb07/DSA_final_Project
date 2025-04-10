@@ -769,9 +769,10 @@
             this.design8.Name = "design8";
             this.design8.Size = new System.Drawing.Size(50, 30);
             this.design8.TabIndex = 11;
-            this.design8.Text = "MR";
+            this.design8.Text = "cos⁡";
             this.design8.TextClor = System.Drawing.Color.DarkGray;
             this.design8.UseVisualStyleBackColor = false;
+            this.design8.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design7
             // 
@@ -787,9 +788,10 @@
             this.design7.Name = "design7";
             this.design7.Size = new System.Drawing.Size(50, 30);
             this.design7.TabIndex = 10;
-            this.design7.Text = "M+";
+            this.design7.Text = "tan⁡";
             this.design7.TextClor = System.Drawing.Color.DarkGray;
             this.design7.UseVisualStyleBackColor = false;
+            this.design7.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design6
             // 
@@ -805,9 +807,10 @@
             this.design6.Name = "design6";
             this.design6.Size = new System.Drawing.Size(50, 30);
             this.design6.TabIndex = 9;
-            this.design6.Text = "MC";
+            this.design6.Text = "sin⁡";
             this.design6.TextClor = System.Drawing.Color.DarkGray;
             this.design6.UseVisualStyleBackColor = false;
+            this.design6.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design5
             // 
@@ -823,9 +826,10 @@
             this.design5.Name = "design5";
             this.design5.Size = new System.Drawing.Size(50, 30);
             this.design5.TabIndex = 8;
-            this.design5.Text = "M-";
+            this.design5.Text = "cot⁡";
             this.design5.TextClor = System.Drawing.Color.DarkGray;
             this.design5.UseVisualStyleBackColor = false;
+            this.design5.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design4
             // 

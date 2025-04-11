@@ -751,7 +751,6 @@
             this.design9.Name = "design9";
             this.design9.Size = new System.Drawing.Size(50, 30);
             this.design9.TabIndex = 12;
-            this.design9.Text = "MS";
             this.design9.TextClor = System.Drawing.Color.DarkGray;
             this.design9.UseVisualStyleBackColor = false;
             // 
@@ -845,7 +844,6 @@
             this.design4.Name = "design4";
             this.design4.Size = new System.Drawing.Size(50, 30);
             this.design4.TabIndex = 7;
-            this.design4.Text = "M~";
             this.design4.TextClor = System.Drawing.Color.DarkGray;
             this.design4.UseVisualStyleBackColor = false;
             // 

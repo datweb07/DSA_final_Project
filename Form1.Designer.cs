@@ -302,7 +302,7 @@
             this.design2.Text = "PI";
             this.design2.TextClor = System.Drawing.Color.DarkGray;
             this.design2.UseVisualStyleBackColor = false;
-            this.design2.Click += new System.EventHandler(this.Pi_Click);
+            this.design2.Click += new System.EventHandler(this.btnPi_Click);
             // 
             // design27
             // 
@@ -891,7 +891,7 @@
             this.design1.Text = "RAD";
             this.design1.TextClor = System.Drawing.Color.DarkGray;
             this.design1.UseVisualStyleBackColor = false;
-            this.design1.Click += new System.EventHandler(this.ToRadian_Click);
+            this.design1.Click += new System.EventHandler(this.btnToRadian_Click);
             // 
             // Form1
             // 

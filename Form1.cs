@@ -268,7 +268,7 @@ namespace finalProject
             }
         }
 
-        private void ToRadian_Click(object sender, EventArgs e)
+        private void btnToRadian_Click(object sender, EventArgs e)
         {
             // Toggle between RAD and DEG
             isRadianMode = !isRadianMode;
@@ -288,7 +288,7 @@ namespace finalProject
         }
 
 
-        private void Pi_Click(object sender, EventArgs e)
+        private void btnPi_Click(object sender, EventArgs e)
         {
             // Thay thế số hiện tại bằng π
             if (txtScreenResult.Text == "0")

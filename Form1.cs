@@ -15,7 +15,7 @@ namespace finalProject
     {
         // Flag to determine which calculator to use (normal or special)
         private bool useSpecialCalculator = false;
-
+        private bool isRadianMode;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,9 @@ namespace finalProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            isRadianMode = false;  //mặc định tính toán với chế độ DEG
+            design1.Text = "RAD";
+            design1.ForeColor = Color.Red;
         }
 
         private void pnHistory_Paint(object sender, PaintEventArgs e)
@@ -180,7 +182,7 @@ namespace finalProject
                 string cur = txtScreenResult.Text;
                 if (cur.StartsWith("-"))
                 {
-                    infixExpression = $"{txtScreenExpression.Text}{txtScreenResult.Text}";
+                    infixExpression = $"{txtScreenExpression.Text}{cur}";
                 }
 
                 // Store original expression for display
@@ -197,28 +199,26 @@ namespace finalProject
                     string postfix = SpecialCalculator.InfixToPostfix(infixExpression);
 
 
-                    //MessageBox.Show($"Trig postfix: {postfix}");
+                    MessageBox.Show($"Trig postfix: {postfix}");
 
 
-                    double symbolicResult = SpecialCalculator.EvaluatePostfix(postfix);
+                    double symbolicResult = SpecialCalculator.EvaluatePostfix(postfix, isRadianMode);
 
 
-                    double numericalResult = SpecialCalculator.EvaluatePostfix(postfix);
+                    double numericalResult = SpecialCalculator.EvaluatePostfix(postfix, isRadianMode);
 
 
                     txtScreenExpression.Text = $"{originalExpression} = ";
                     txtScreenResult.Text = numericalResult.ToString();
 
 
-                    //MessageBox.Show($"Symbolic form: {symbolicResult}", "Symbolic Result");
+                    MessageBox.Show($"Symbolic form: {symbolicResult}", "Symbolic Result");
                 }
                 else
                 {
 
                     string postfixExpression = Calculator.InfixToPostfix(infixExpression);
-
-
-                    //MessageBox.Show($"Regular postfix: {postfixExpression}");
+                    MessageBox.Show($"Postfix: {postfixExpression}");
 
                     double result = Calculator.EvaluatePostfix(postfixExpression);
 
@@ -254,49 +254,51 @@ namespace finalProject
             }
         }
 
-        //bổ sung thêm phương thức số âm
         private void btnNegative_Click(object sender, EventArgs e)
         {
-            //// Nếu màn hình hiện "0" thì không làm gì
-            //if (txtScreenResult.Text == "0")
-            //    return;
-
-            //// Nếu số đang là dương, thêm dấu âm
-            //if (!txtScreenResult.Text.StartsWith("-"))
-            //{
-            //    double res = double.Parse(txtScreenResult.Text) * -1;
-            //    txtScreenResult.Text = res.ToString();
-            //}
-            ////else
-            ////{
-            ////    // Nếu số đang là âm, đổi thành dương
-            ////    double res = double.Parse(txtScreenResult.Text) * -1;
-            ////    txtScreenResult.Text = res.ToString();
-            ////}
-            ///
-            // Nếu màn hình hiện "0" thì không làm gì
+            // Nếu màn hình hiện "0" thì không làm gì cả
             if (txtScreenResult.Text == "0")
                 return;
 
             // Đổi dấu của số hiện tại
-            if (txtScreenResult.Text.StartsWith("-"))
-            {
-                // Nếu số đang là âm, đổi thành dương (bỏ dấu trừ ở đầu)
-                txtScreenResult.Text = txtScreenResult.Text.Substring(1);
-            }
-            else
+            if (!txtScreenResult.Text.StartsWith("-"))
             {
                 // Nếu số đang là dương, thêm dấu âm
                 txtScreenResult.Text = "-" + txtScreenResult.Text;
             }
         }
 
-        // Add method to switch between normal and trigonometric calculator modes
-        private void btnSwitchMode_Click(object sender, EventArgs e)
+        private void ToRadian_Click(object sender, EventArgs e)
         {
-            useSpecialCalculator = !useSpecialCalculator;
-            string mode = useSpecialCalculator ? "Trigonometric" : "Standard";
-            MessageBox.Show($"Switched to {mode} Calculator Mode", "Mode Change");
+            // Toggle between RAD and DEG
+            isRadianMode = !isRadianMode;
+
+            // Update UI button to reflect the current mode
+            UpdateAngleModeIndicator();
+
+            // Optional: Display a message to inform user
+            string mode = isRadianMode ? "RADIAN" : "DEGREE";
+            MessageBox.Show($"Chuyển sang chế độ {mode}.", "Chế độ góc", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void UpdateAngleModeIndicator()
+        {
+            design1.Text = isRadianMode ? "RAD" : "DEG";
+            design1.ForeColor = isRadianMode ? Color.Red : Color.Black;
+        }
+
+
+        private void Pi_Click(object sender, EventArgs e)
+        {
+            // Thay thế số hiện tại bằng π
+            if (txtScreenResult.Text == "0")
+            {
+                txtScreenResult.Text = Math.PI.ToString();
+            }
+            else
+            {
+                txtScreenResult.Text = txtScreenResult.Text + Math.PI.ToString();
+            }
         }
     }
 }

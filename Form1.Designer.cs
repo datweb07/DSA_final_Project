@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtScreenExpression = new System.Windows.Forms.TextBox();
             this.txtScreenResult = new System.Windows.Forms.TextBox();
+            this.design2 = new customButton.Design();
             this.design27 = new customButton.Design();
             this.design28 = new customButton.Design();
             this.design29 = new customButton.Design();
@@ -67,7 +68,6 @@
             this.btnC = new customButton.Design();
             this.bntClosedParentheses = new customButton.Design();
             this.btnOpenParentheses = new customButton.Design();
-            this.design9 = new customButton.Design();
             this.design8 = new customButton.Design();
             this.design7 = new customButton.Design();
             this.design6 = new customButton.Design();
@@ -75,6 +75,7 @@
             this.design4 = new customButton.Design();
             this.btnDelete = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
+            this.design1 = new customButton.Design();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnHistory.SuspendLayout();
@@ -283,6 +284,25 @@
             this.txtScreenResult.Text = "0";
             this.txtScreenResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtScreenResult.TextChanged += new System.EventHandler(this.txtScreenResult_TextChanged);
+            // 
+            // design2
+            // 
+            this.design2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design2.BorderRadius = 15;
+            this.design2.BorderSize = 0;
+            this.design2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.design2.FlatAppearance.BorderSize = 0;
+            this.design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design2.ForeColor = System.Drawing.Color.DarkGray;
+            this.design2.Location = new System.Drawing.Point(277, 184);
+            this.design2.Margin = new System.Windows.Forms.Padding(0);
+            this.design2.Name = "design2";
+            this.design2.Size = new System.Drawing.Size(50, 30);
+            this.design2.TabIndex = 36;
+            this.design2.Text = "PI";
+            this.design2.TextClor = System.Drawing.Color.DarkGray;
+            this.design2.UseVisualStyleBackColor = false;
+            this.design2.Click += new System.EventHandler(this.Pi_Click);
             // 
             // design27
             // 
@@ -737,23 +757,6 @@
             this.btnOpenParentheses.UseVisualStyleBackColor = false;
             this.btnOpenParentheses.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design9
-            // 
-            this.design9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design9.BorderRadius = 15;
-            this.design9.BorderSize = 0;
-            this.design9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design9.FlatAppearance.BorderSize = 0;
-            this.design9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design9.ForeColor = System.Drawing.Color.DarkGray;
-            this.design9.Location = new System.Drawing.Point(224, 184);
-            this.design9.Margin = new System.Windows.Forms.Padding(0);
-            this.design9.Name = "design9";
-            this.design9.Size = new System.Drawing.Size(50, 30);
-            this.design9.TabIndex = 12;
-            this.design9.TextClor = System.Drawing.Color.DarkGray;
-            this.design9.UseVisualStyleBackColor = false;
-            // 
             // design8
             // 
             this.design8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
@@ -871,11 +874,32 @@
             this.ellipseControl1.CornerRadius = 20;
             this.ellipseControl1.TargetControl = this;
             // 
+            // design1
+            // 
+            this.design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.design1.BorderRadius = 15;
+            this.design1.BorderSize = 0;
+            this.design1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.design1.FlatAppearance.BorderSize = 0;
+            this.design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.design1.ForeColor = System.Drawing.Color.DarkGray;
+            this.design1.Location = new System.Drawing.Point(227, 184);
+            this.design1.Margin = new System.Windows.Forms.Padding(0);
+            this.design1.Name = "design1";
+            this.design1.Size = new System.Drawing.Size(50, 30);
+            this.design1.TabIndex = 37;
+            this.design1.Text = "RAD";
+            this.design1.TextClor = System.Drawing.Color.DarkGray;
+            this.design1.UseVisualStyleBackColor = false;
+            this.design1.Click += new System.EventHandler(this.ToRadian_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(327, 600);
+            this.Controls.Add(this.design1);
+            this.Controls.Add(this.design2);
             this.Controls.Add(this.design27);
             this.Controls.Add(this.design28);
             this.Controls.Add(this.design29);
@@ -899,7 +923,6 @@
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.bntClosedParentheses);
             this.Controls.Add(this.btnOpenParentheses);
-            this.Controls.Add(this.design9);
             this.Controls.Add(this.design8);
             this.Controls.Add(this.design7);
             this.Controls.Add(this.design6);
@@ -940,7 +963,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private customButton.EllipseControl ellipseControl1;
         private customButton.Design btnDelete;
-        private customButton.Design design9;
         private customButton.Design design8;
         private customButton.Design design7;
         private customButton.Design design6;
@@ -975,6 +997,8 @@
         private customButton.Design design31;
         private customButton.Design design32;
         private System.Windows.Forms.TextBox txtScreenResult;
+        private customButton.Design design2;
+        private customButton.Design design1;
     }
 }
 

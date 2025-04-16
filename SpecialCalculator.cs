@@ -43,7 +43,7 @@ namespace finalProject
 
             public object Peek()
             {
-                return top?.data;
+                return top.data;
             }
 
             public int Count()
@@ -59,7 +59,7 @@ namespace finalProject
             }
         }
 
-        public static int GetPrecedence(string op)
+        public static int DoUuTien(string op)
         {
             switch (op)
             {
@@ -70,92 +70,11 @@ namespace finalProject
                 case "√": return 4;
                 case "^": return 3;
                 case "×":
-                case "*":
-                case "÷":
-                case "/":
-                    return 2;
+                case "÷": return 2;
                 case "+":
                 case "-": return 1;
                 default: return 0;
             }
-        }
-
-        public static string InfixToPostfix(string infix)
-        {
-            MyStack<string> stack = new MyStack<string>();
-            List<string> postFix = new List<string>();
-            bool lastWasDigit = false;
-
-            infix = infix.Replace("*", "×").Replace("/", "÷");
-
-            List<string> tokens = TokenizeExpression(infix);
-
-            foreach (string token in tokens)
-            {
-                if (double.TryParse(token, out _) || token == ".")
-                {
-                    postFix.Add(token);
-                    lastWasDigit = true;
-                }
-                else
-                {
-                    if (lastWasDigit)
-                    {
-                        postFix.Add(" ");
-                        lastWasDigit = false;
-                    }
-
-                    if (token == "(")
-                    {
-                        stack.Push(token);
-                    }
-                    else if (token == ")")
-                    {
-                        while (stack.Count() > 0 && (string)stack.Peek() != "(")
-                        {
-                            postFix.Add(stack.Pop().data.ToString());
-                        }
-
-                        if (stack.Count() > 0 && (string)stack.Peek() == "(")
-                        {
-                            stack.Pop(); // xóa "("
-                            if (stack.Count() > 0 && IsTrigFunction((string)stack.Peek()))
-                            {
-                                postFix.Add(stack.Pop().data.ToString());
-                            }
-                        }
-                    }
-                    else if (IsTrigFunction(token))
-                    {
-                        stack.Push(token);
-                    }
-                    else if (token != " ")
-                    {
-                        while (stack.Count() > 0 &&
-                               (string)stack.Peek() != "(" &&
-                               GetPrecedence((string)stack.Peek()) >= GetPrecedence(token))
-                        {
-                            postFix.Add(stack.Pop().data.ToString());
-                        }
-                        stack.Push(token);
-                    }
-                }
-            }
-
-            if (lastWasDigit) postFix.Add(" ");
-
-            while (stack.Count() > 0)
-            {
-                postFix.Add(stack.Pop().data.ToString());
-            }
-
-            return string.Join("", postFix);
-        }
-
-        // check if token is a trigonometric function
-        private static bool IsTrigFunction(string token)
-        {
-            return token == "sin" || token == "cos" || token == "tan" || token == "cot";
         }
 
         private static List<string> TokenizeExpression(string expression)
@@ -209,212 +128,199 @@ namespace finalProject
             return tokens;
         }
 
-
-        public static double EvaluatePostfix(string postFix)
+        public static string InfixToPostfix(string infix)
         {
-            Stack<double> stack = new Stack<double>();
-            List<string> tokens = TokenizePostfix(postFix);
+            MyStack<string> stack = new MyStack<string>();
+            List<string> postFix = new List<string>();
+            bool lastWasDigit = false;
+
+            List<string> tokens = TokenizeExpression(infix);
 
             foreach (string token in tokens)
             {
-
-                if (double.TryParse(token, out double number))
+                if (double.TryParse(token, out _) || token == ".")
                 {
-                    stack.Push(number);
+                    postFix.Add(token);
+                    lastWasDigit = true;
                 }
-
-                else if (token != " ")
+                else
                 {
-                    switch (token)
+                    if (lastWasDigit)
                     {
-                        case "sin":
-                            if (stack.Count < 1)
-                                throw new InvalidOperationException("Not enough operands for sin function");
-                            double sinValue = stack.Pop();
-                            stack.Push(Math.Sin(DegToRad(sinValue))); // Convert degrees to radians
-                            break;
+                        postFix.Add(" ");
+                        lastWasDigit = false;
+                    }
 
-                        case "cos":
-                            if (stack.Count < 1)
-                                throw new InvalidOperationException("Not enough operands for cos function");
-                            double cosValue = stack.Pop();
-                            stack.Push(Math.Cos(DegToRad(cosValue)));
-                            break;
+                    if (token == "(")
+                    {
+                        stack.Push(token);
+                    }
+                    else if (token == ")")
+                    {
+                        while (stack.Count() > 0 && (string)stack.Peek() != "(")
+                        {
+                            postFix.Add(stack.Pop().data.ToString());
+                        }
 
-                        case "tan":
-                            if (stack.Count < 1)
-                                throw new InvalidOperationException("Not enough operands for tan function");
-                            double tanValue = stack.Pop();
-
-                            double tanRadians = DegToRad(tanValue);
-                            if (Math.Abs(Math.Cos(tanRadians)) < 1e-10)
-                                throw new DivideByZeroException("Tangent is undefined for this angle");
-                            stack.Push(Math.Tan(tanRadians));
-                            break;
-
-                        case "cot":
-                            if (stack.Count < 1)
-                                throw new InvalidOperationException("Not enough operands for cot function");
-                            double cotValue = stack.Pop();
-
-                            double cotRadians = DegToRad(cotValue);
-                            if (Math.Abs(Math.Sin(cotRadians)) < 1e-10)
-                                throw new DivideByZeroException("Cotangent is undefined for this angle");
-                            stack.Push(1.0 / Math.Tan(cotRadians));
-                            break;
-
-                        case "√":
-                            if (stack.Count < 1)
-                                throw new InvalidOperationException("Not enough operands for square root");
-                            double sqrtValue = stack.Pop();
-                            if (sqrtValue < 0)
-                                throw new ArgumentException("Cannot calculate square root of a negative number");
-                            stack.Push(Math.Sqrt(sqrtValue));
-                            break;
-
-                        case "^":
-                            if (stack.Count < 2)
-                                throw new InvalidOperationException("Not enough operands for power operator");
-                            double exponent = stack.Pop();
-                            double baseValue = stack.Pop();
-                            stack.Push(Math.Pow(baseValue, exponent));
-                            break;
-
-                        case "+":
-                            if (stack.Count < 2)
-                                throw new InvalidOperationException("Not enough operands for addition");
-                            double addend2 = stack.Pop();
-                            double addend1 = stack.Pop();
-                            stack.Push(addend1 + addend2);
-                            break;
-
-                        case "-":
-                            if (stack.Count < 2)
-                                throw new InvalidOperationException("Not enough operands for subtraction");
-                            double subtrahend = stack.Pop();
-                            double minuend = stack.Pop();
-                            stack.Push(minuend - subtrahend);
-                            break;
-
-                        case "×":
-                        case "*":
-                            if (stack.Count < 2)
-                                throw new InvalidOperationException("Not enough operands for multiplication");
-                            double factor2 = stack.Pop();
-                            double factor1 = stack.Pop();
-                            stack.Push(factor1 * factor2);
-                            break;
-
-                        case "÷":
-                        case "/":
-                            if (stack.Count < 2)
-                                throw new InvalidOperationException("Not enough operands for division");
-                            double divisor = stack.Pop();
-                            if (Math.Abs(divisor) < 1e-10)
-                                throw new DivideByZeroException("Cannot divide by zero");
-                            double dividend = stack.Pop();
-                            stack.Push(dividend / divisor);
-                            break;
-
-                        default:
-                            throw new ArgumentException($"Invalid operator or function: {token}");
+                        if (stack.Count() > 0 && (string)stack.Peek() == "(")
+                        {
+                            stack.Pop(); // xóa "("
+                            if (stack.Count() > 0 && IsTrigFunction((string)stack.Peek()))
+                            {
+                                postFix.Add(stack.Pop().data.ToString());
+                            }
+                        }
+                    }
+                    else if (IsTrigFunction(token))
+                    {
+                        stack.Push(token);
+                    }
+                    else if (token != " ")
+                    {
+                        while (stack.Count() > 0 &&
+                               (string)stack.Peek() != "(" &&
+                               DoUuTien((string)stack.Peek()) >= DoUuTien(token))
+                        {
+                            postFix.Add(stack.Pop().data.ToString());
+                        }
+                        stack.Push(token);
                     }
                 }
             }
 
+            if (lastWasDigit) postFix.Add(" ");
 
-            if (stack.Count == 0)
-                throw new InvalidOperationException("Empty expression or evaluation error");
-
-
-            if (stack.Count > 1)
+            while (stack.Count() > 0)
             {
-                Console.WriteLine($"Warning: Expression may be incomplete. {stack.Count} values left on stack.");
+                postFix.Add(stack.Pop().data.ToString());
             }
 
-            return stack.Pop();
+            return string.Join("", postFix);
         }
 
-
-        private static List<string> TokenizePostfix(string postfix)
+        // check if token is a trigonometric function
+        private static bool IsTrigFunction(string token)
         {
-            List<string> tokens = new List<string>();
+            return token == "sin" || token == "cos" || token == "tan" || token == "cot";
+        }
+
+        public static double EvaluatePostfix(string postFix, bool isRadianMode)
+        {
+            MyStack<double> stack = new MyStack<double>();
             string currentToken = "";
 
-            for (int i = 0; i < postfix.Length; i++)
+            for (int i = 0; i < postFix.Length; i++)
             {
-                char c = postfix[i];
+                char ch = postFix[i];
 
-
-                if (char.IsLetter(c))
+                // Xử lý token (số, hàm, toán tử)
+                if (char.IsLetter(ch))
                 {
-                    currentToken += c;
-                    while (i + 1 < postfix.Length && char.IsLetter(postfix[i + 1]))
+                    // Xử lý hàm lượng giác (sin, cos, tan, cot)
+                    currentToken += ch;
+                    while (i + 1 < postFix.Length && char.IsLetter(postFix[i + 1]))
                     {
-                        currentToken += postfix[++i];
+                        currentToken += postFix[++i];
                     }
-                    tokens.Add(currentToken);
+
+                    if (stack.Count() < 1)
+                        throw new InvalidOperationException("Không đủ toán hạng cho hàm " + currentToken);
+
+                    double value = (double)stack.Pop().data;
+                    //double result = ProcessTrigFunction(currentToken, value, true);
+                    double result = ProcessTrigFunction(currentToken, value, isRadianMode);
+                    stack.Push(result);
                     currentToken = "";
                 }
-
-                else if (char.IsDigit(c) || c == '.')
+                else if (char.IsDigit(ch) || ch == '.' || (ch == '-' && (i == 0 || postFix[i - 1] == ' ')))
                 {
-                    currentToken += c;
-                    while (i + 1 < postfix.Length && (char.IsDigit(postfix[i + 1]) || postfix[i + 1] == '.'))
+                    // Xử lý số (bao gồm số âm và số thập phân)
+                    currentToken += ch;
+                    while (i + 1 < postFix.Length && (char.IsDigit(postFix[i + 1]) || postFix[i + 1] == '.'))
                     {
-                        currentToken += postfix[++i];
+                        currentToken += postFix[++i];
                     }
-                    tokens.Add(currentToken);
+
+                    if (currentToken != "-") // Tránh trường hợp chỉ có dấu -
+                    {
+                        stack.Push(double.Parse(currentToken));
+                    }
                     currentToken = "";
                 }
-
-                else if (c == '+' || c == '-' || c == '×' || c == '÷' || c == '*' || c == '/' ||
-                         c == '^' || c == '√')
+                else if (ch == ' ')
                 {
-                    tokens.Add(c.ToString());
+                    // Bỏ qua khoảng trắng
+                    currentToken = "";
                 }
-
-                else if (c == ' ')
+                else // Xử lý toán tử
                 {
-                    if (currentToken != "")
+                    if (ch == '√')
                     {
-                        tokens.Add(currentToken);
-                        currentToken = "";
+                        // Xử lý căn bậc 2
+                        if (stack.Count() < 1)
+                            throw new InvalidOperationException("Không đủ toán hạng");
+                        double ele = (double)stack.Pop().data;
+                        if (ele < 0)
+                            throw new ArgumentException("Lỗi! Không thể tính căn số âm");
+                        stack.Push(Math.Sqrt(ele));
+                    }
+                    else
+                    {
+                        // Xử lý toán tử 2 ngôi
+                        if (stack.Count() < 2)
+                            throw new InvalidOperationException("Không đủ toán hạng");
+
+                        double second_op = (double)stack.Pop().data;
+                        double first_op = (double)stack.Pop().data;
+                        double result = ProcessOperator(ch, first_op, second_op);
+                        stack.Push(result);
                     }
                 }
             }
 
-            if (currentToken != "")
-                tokens.Add(currentToken);
+            if (stack.Count() != 1)
+                throw new InvalidOperationException("Biểu thức không hợp lệ");
 
-            return tokens;
+            return (double)stack.Pop().data;
         }
 
-        // convert degrees to radians
-        public static double DegToRad(double degrees)
+        public static double ProcessTrigFunction(string func, double value, bool isRadianMode)
         {
-            return degrees * Math.PI / 180.0;
-        }
+            double radians = isRadianMode ? value : (value * Math.PI / 180.0);
 
-        // convert radians to degrees
-        public static double RadToDeg(double radians)
-        {
-            return radians * 180.0 / Math.PI;
-        }
-
-        //  testing expressions
-        public static double Calculate(string expression)
-        {
-            try
+            switch (func.ToLower())
             {
-                string postfix = InfixToPostfix(expression);
-                Console.WriteLine($"Postfix: {postfix}");
-                return EvaluatePostfix(postfix);
+                case "sin":
+                    return Math.Sin(radians);
+                case "cos":
+                    return Math.Cos(radians);
+                case "tan":
+                    if (Math.Abs(Math.Cos(radians)) < 1e-10)
+                        throw new Exception("Tan undefined for this angle");
+                    return Math.Tan(radians);
+                case "cot":
+                    if (Math.Abs(Math.Sin(radians)) < 1e-10)
+                        throw new Exception("Cot undefined for this angle");
+                    return 1.0 / Math.Tan(radians);
+                default:
+                    throw new ArgumentException($"Unsupported function: {func}");
             }
-            catch (Exception ex)
+        }
+
+        private static double ProcessOperator(char op, double first, double second)
+        {
+            switch (op)
             {
-                Console.WriteLine($"Error calculating: {ex.Message}");
-                return double.NaN;
+                case '^': return Math.Pow(first, second);
+                case '+': return first + second;
+                case '-': return first - second;
+                case '×': return first * second;
+                case '÷':
+                    if (Math.Abs(second) < 1e-10)
+                        throw new DivideByZeroException("Lỗi! Không thể chia cho 0");
+                    return first / second;
+                default:
+                    throw new ArgumentException($"Toán tử không hợp lệ: {op}");
             }
         }
     }

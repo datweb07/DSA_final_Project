@@ -60,7 +60,7 @@ namespace finalProject
             }
         }
 
-        public static int GetPrecedence(char c)
+        public static int DoUuTien(char c)
         {
             switch (c)
             {
@@ -76,68 +76,85 @@ namespace finalProject
 
         public static string InfixToPostfix(string infix)
         {
-            MyStack<char> stack = new MyStack<char>();
+            MyStack<string> stack = new MyStack<string>();
             List<string> postFix = new List<string>();
-            bool lastWasDigit = false;
+            string number = "";
 
-            foreach (char c in infix)
+            for (int i = 0; i < infix.Length; i++)
             {
+                char c = infix[i];
+
                 if (char.IsDigit(c) || c == '.')
                 {
-                    postFix.Add(c.ToString());
-                    lastWasDigit = true;
+                    number += c;
+                }
+                else if (c == '-' && (i == 0 || infix[i - 1] == '(' || "+-×÷^".Contains(infix[i - 1])))
+                {
+                    // Số âm
+                    number += c;
+                }
+                else if (c == ' ')
+                {
+                    continue;
                 }
                 else
                 {
-                    if (lastWasDigit)
+                    if (number != "")
                     {
-                        postFix.Add(" ");
-                        lastWasDigit = false;
+                        postFix.Add(number);
+                        number = "";
                     }
 
                     if (c == '(')
                     {
-                        stack.Push(c);
+                        stack.Push(c.ToString());
                     }
                     else if (c == ')')
                     {
-                        while (stack.Count() > 0 && (char)stack.Peek() != '(')
+                        while (!stack.IsEmpty() && (string)stack.Peek() != "(")
                         {
                             postFix.Add(stack.Pop().data.ToString());
                         }
-                        stack.Pop();
+                        stack.Pop(); // bỏ dấu '('
                     }
-                    else if (c != ' ')
+                    else // toán tử
                     {
-                        while (stack.Count() > 0 && GetPrecedence((char)stack.Peek()) >= GetPrecedence(c))
+                        string token = c.ToString();
+                        while (!stack.IsEmpty() && DoUuTien(((string)stack.Peek())[0]) >= DoUuTien(token[0]))
                         {
                             postFix.Add(stack.Pop().data.ToString());
                         }
-                        stack.Push(c);
+                        stack.Push(token);
                     }
                 }
             }
 
-            if (lastWasDigit) postFix.Add(" ");
+            // Thêm số còn lại nếu có
+            if (number != "")
+            {
+                postFix.Add(number);
+            }
 
-            while (stack.Count() > 0)
+            // Đẩy các toán tử còn lại ra
+            while (!stack.IsEmpty())
             {
                 postFix.Add(stack.Pop().data.ToString());
             }
 
-            return string.Join("", postFix);
+            return string.Join(" ", postFix);
         }
 
         public static double EvaluatePostfix(string postFix)
         {
-            Stack<double> stack = new Stack<double>();
+            MyStack<double> stack = new MyStack<double>();
             string currentNumber = "";
 
             for (int i = 0; i < postFix.Length; i++)
             {
                 char ch = postFix[i];
 
-                if (char.IsDigit(ch) || ch == '.')
+                // Xử lý số (bao gồm cả số âm và số thập phân)
+                if (char.IsDigit(ch) || ch == '.' || (ch == '-' && (i + 1 < postFix.Length && char.IsDigit(postFix[i + 1]))))
                 {
                     currentNumber += ch;
                 }
@@ -145,33 +162,42 @@ namespace finalProject
                 {
                     if (currentNumber != "")
                     {
-                        stack.Push(double.Parse(currentNumber));
+                        // Nếu currentNumber bắt đầu bằng '-' và có độ dài > 1, hoặc không bắt đầu bằng '-'
+                        if (currentNumber != "-")
+                        {
+                            stack.Push(double.Parse(currentNumber));
+                        }
                         currentNumber = "";
                     }
                 }
                 else  // Toán tử
                 {
+                    if (currentNumber != "")
+                    {
+                        stack.Push(double.Parse(currentNumber));
+                        currentNumber = "";
+                    }
+
                     if (ch == '√')
                     {
                         if (stack.Count() < 1)
-                            throw new InvalidOperationException("Not enough operand");
-                        double eleSpq = stack.Pop();
-                        if (eleSpq < 0)
-                            throw new ArgumentException("Negative number");
-                        stack.Push(Math.Sqrt(eleSpq));
+                            throw new InvalidOperationException("Không đủ toán hạng");
+                        double ele = (double)stack.Pop().data;
+                        if (ele < 0)
+                            throw new ArgumentException("Lỗi! Là số âm");
+                        stack.Push(Math.Sqrt(ele));
                     }
                     else
                     {
-                        if (stack.Count < 2)
-                            throw new InvalidOperationException("Not enough operands for operator");
+                        if (stack.Count() < 2)
+                            throw new InvalidOperationException("Không đủ toán hạng");
 
-                        double second_op = stack.Pop();
-                        double first_op = stack.Pop();
+                        double second_op = (double)stack.Pop().data;
+                        double first_op = (double)stack.Pop().data;
                         double result = 0;
 
                         switch (ch)
                         {
-                            case '√': result = Math.Sqrt(first_op); break;
                             case '^': result = Math.Pow(first_op, second_op); break;
                             case '+': result = first_op + second_op; break;
                             case '-': result = first_op - second_op; break;
@@ -187,13 +213,15 @@ namespace finalProject
                 }
             }
 
-            if (currentNumber != "")
+            if (currentNumber != "" && currentNumber != "-")
+            {
                 stack.Push(double.Parse(currentNumber));
+            }
 
-            if (stack.Count != 1)
+            if (stack.Count() != 1)
                 throw new InvalidOperationException("Invalid expression");
 
-            return stack.Pop();
+            return (double)stack.Pop().data;
         }
     }
 }

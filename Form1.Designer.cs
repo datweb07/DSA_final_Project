@@ -30,64 +30,64 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblCalculator = new System.Windows.Forms.Label();
+            this.picIcon = new System.Windows.Forms.PictureBox();
+            this.btnMiniature = new System.Windows.Forms.Button();
+            this.btnZoom = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pnHistory = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.design32 = new customButton.Design();
-            this.design31 = new customButton.Design();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnOption = new customButton.Design();
+            this.btnHistory = new customButton.Design();
+            this.lblTeam = new System.Windows.Forms.Label();
             this.txtScreenExpression = new System.Windows.Forms.TextBox();
             this.txtScreenResult = new System.Windows.Forms.TextBox();
-            this.design2 = new customButton.Design();
-            this.design27 = new customButton.Design();
-            this.design28 = new customButton.Design();
-            this.design29 = new customButton.Design();
-            this.design30 = new customButton.Design();
-            this.design23 = new customButton.Design();
-            this.design24 = new customButton.Design();
-            this.design25 = new customButton.Design();
-            this.design26 = new customButton.Design();
-            this.design19 = new customButton.Design();
-            this.design20 = new customButton.Design();
-            this.design21 = new customButton.Design();
-            this.design22 = new customButton.Design();
-            this.design15 = new customButton.Design();
-            this.design16 = new customButton.Design();
-            this.design17 = new customButton.Design();
-            this.design18 = new customButton.Design();
-            this.design11 = new customButton.Design();
-            this.design12 = new customButton.Design();
-            this.design13 = new customButton.Design();
-            this.design14 = new customButton.Design();
+            this.btnRad = new customButton.Design();
+            this.btnPi = new customButton.Design();
+            this.btnFloatingPoint = new customButton.Design();
+            this.btnZero = new customButton.Design();
+            this.btnNegative = new customButton.Design();
+            this.btnEqual = new customButton.Design();
+            this.btnThree = new customButton.Design();
+            this.btnTwo = new customButton.Design();
+            this.btnOne = new customButton.Design();
+            this.btnPlus = new customButton.Design();
+            this.btnSix = new customButton.Design();
+            this.btnFive = new customButton.Design();
+            this.btnFour = new customButton.Design();
+            this.btnExcept = new customButton.Design();
+            this.btnNine = new customButton.Design();
+            this.btnEight = new customButton.Design();
+            this.btnSeven = new customButton.Design();
+            this.btnMultiply = new customButton.Design();
+            this.btnSquareRoot = new customButton.Design();
+            this.btnSquare = new customButton.Design();
+            this.btnFraction = new customButton.Design();
+            this.btnDivide = new customButton.Design();
             this.btnC = new customButton.Design();
             this.bntClosedParentheses = new customButton.Design();
             this.btnOpenParentheses = new customButton.Design();
-            this.design8 = new customButton.Design();
-            this.design7 = new customButton.Design();
-            this.design6 = new customButton.Design();
-            this.design5 = new customButton.Design();
+            this.btnCos = new customButton.Design();
+            this.btnTan = new customButton.Design();
+            this.btnSin = new customButton.Design();
+            this.btnCot = new customButton.Design();
             this.design4 = new customButton.Design();
             this.btnDelete = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
-            this.design1 = new customButton.Design();
             this.pnHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.pnHistory.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnHeader
             // 
-            this.pnHeader.Controls.Add(this.label1);
-            this.pnHeader.Controls.Add(this.pictureBox1);
-            this.pnHeader.Controls.Add(this.button2);
-            this.pnHeader.Controls.Add(this.button1);
+            this.pnHeader.Controls.Add(this.lblCalculator);
+            this.pnHeader.Controls.Add(this.picIcon);
+            this.pnHeader.Controls.Add(this.btnMiniature);
+            this.pnHeader.Controls.Add(this.btnZoom);
             this.pnHeader.Controls.Add(this.btnExit);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
@@ -96,52 +96,52 @@
             this.pnHeader.Size = new System.Drawing.Size(327, 38);
             this.pnHeader.TabIndex = 0;
             // 
-            // label1
+            // lblCalculator
             // 
-            this.label1.Location = new System.Drawing.Point(63, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Calculator";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCalculator.Location = new System.Drawing.Point(63, 9);
+            this.lblCalculator.Name = "lblCalculator";
+            this.lblCalculator.Size = new System.Drawing.Size(83, 20);
+            this.lblCalculator.TabIndex = 4;
+            this.lblCalculator.Text = "Calculator";
+            this.lblCalculator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // picIcon
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.picIcon.Image = ((System.Drawing.Image)(resources.GetObject("picIcon.Image")));
+            this.picIcon.Location = new System.Drawing.Point(9, 0);
+            this.picIcon.Name = "picIcon";
+            this.picIcon.Size = new System.Drawing.Size(46, 38);
+            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picIcon.TabIndex = 3;
+            this.picIcon.TabStop = false;
             // 
-            // button2
+            // btnMiniature
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(177, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 38);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMiniature.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMiniature.FlatAppearance.BorderSize = 0;
+            this.btnMiniature.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnMiniature.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiniature.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniature.Image")));
+            this.btnMiniature.Location = new System.Drawing.Point(177, 0);
+            this.btnMiniature.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMiniature.Name = "btnMiniature";
+            this.btnMiniature.Size = new System.Drawing.Size(50, 38);
+            this.btnMiniature.TabIndex = 2;
+            this.btnMiniature.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnZoom
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(227, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 38);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnZoom.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnZoom.FlatAppearance.BorderSize = 0;
+            this.btnZoom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.btnZoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZoom.Image = ((System.Drawing.Image)(resources.GetObject("btnZoom.Image")));
+            this.btnZoom.Location = new System.Drawing.Point(227, 0);
+            this.btnZoom.Margin = new System.Windows.Forms.Padding(0);
+            this.btnZoom.Name = "btnZoom";
+            this.btnZoom.Size = new System.Drawing.Size(50, 38);
+            this.btnZoom.TabIndex = 1;
+            this.btnZoom.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -200,9 +200,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.design32);
-            this.panel1.Controls.Add(this.design31);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnOption);
+            this.panel1.Controls.Add(this.btnHistory);
+            this.panel1.Controls.Add(this.lblTeam);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -210,47 +210,47 @@
             this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
             // 
-            // design32
+            // btnOption
             // 
-            this.design32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design32.BorderRadius = 20;
-            this.design32.BorderSize = 0;
-            this.design32.FlatAppearance.BorderSize = 0;
-            this.design32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design32.ForeColor = System.Drawing.Color.White;
-            this.design32.Image = ((System.Drawing.Image)(resources.GetObject("design32.Image")));
-            this.design32.Location = new System.Drawing.Point(9, 0);
-            this.design32.Name = "design32";
-            this.design32.Size = new System.Drawing.Size(50, 36);
-            this.design32.TabIndex = 37;
-            this.design32.TextClor = System.Drawing.Color.White;
-            this.design32.UseVisualStyleBackColor = false;
+            this.btnOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnOption.BorderRadius = 20;
+            this.btnOption.BorderSize = 0;
+            this.btnOption.FlatAppearance.BorderSize = 0;
+            this.btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOption.ForeColor = System.Drawing.Color.White;
+            this.btnOption.Image = ((System.Drawing.Image)(resources.GetObject("btnOption.Image")));
+            this.btnOption.Location = new System.Drawing.Point(9, 0);
+            this.btnOption.Name = "btnOption";
+            this.btnOption.Size = new System.Drawing.Size(50, 36);
+            this.btnOption.TabIndex = 37;
+            this.btnOption.TextClor = System.Drawing.Color.White;
+            this.btnOption.UseVisualStyleBackColor = false;
             // 
-            // design31
+            // btnHistory
             // 
-            this.design31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design31.BorderRadius = 20;
-            this.design31.BorderSize = 0;
-            this.design31.FlatAppearance.BorderSize = 0;
-            this.design31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design31.ForeColor = System.Drawing.Color.White;
-            this.design31.Image = ((System.Drawing.Image)(resources.GetObject("design31.Image")));
-            this.design31.Location = new System.Drawing.Point(265, 0);
-            this.design31.Name = "design31";
-            this.design31.Size = new System.Drawing.Size(50, 36);
-            this.design31.TabIndex = 36;
-            this.design31.TextClor = System.Drawing.Color.White;
-            this.design31.UseVisualStyleBackColor = false;
+            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnHistory.BorderRadius = 20;
+            this.btnHistory.BorderSize = 0;
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
+            this.btnHistory.Location = new System.Drawing.Point(265, 0);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(50, 36);
+            this.btnHistory.TabIndex = 36;
+            this.btnHistory.TextClor = System.Drawing.Color.White;
+            this.btnHistory.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblTeam
             // 
-            this.label2.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, -1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 34);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Team";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTeam.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeam.Location = new System.Drawing.Point(62, -1);
+            this.lblTeam.Name = "lblTeam";
+            this.lblTeam.Size = new System.Drawing.Size(68, 34);
+            this.lblTeam.TabIndex = 3;
+            this.lblTeam.Text = "Team";
+            this.lblTeam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtScreenExpression
             // 
@@ -285,420 +285,440 @@
             this.txtScreenResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtScreenResult.TextChanged += new System.EventHandler(this.txtScreenResult_TextChanged);
             // 
-            // design2
+            // btnRad
             // 
-            this.design2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design2.BorderRadius = 15;
-            this.design2.BorderSize = 0;
-            this.design2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design2.FlatAppearance.BorderSize = 0;
-            this.design2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design2.ForeColor = System.Drawing.Color.DarkGray;
-            this.design2.Location = new System.Drawing.Point(277, 184);
-            this.design2.Margin = new System.Windows.Forms.Padding(0);
-            this.design2.Name = "design2";
-            this.design2.Size = new System.Drawing.Size(50, 30);
-            this.design2.TabIndex = 36;
-            this.design2.Text = "PI";
-            this.design2.TextClor = System.Drawing.Color.DarkGray;
-            this.design2.UseVisualStyleBackColor = false;
-            this.design2.Click += new System.EventHandler(this.btnPi_Click);
+            this.btnRad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnRad.BorderRadius = 15;
+            this.btnRad.BorderSize = 0;
+            this.btnRad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRad.FlatAppearance.BorderSize = 0;
+            this.btnRad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRad.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnRad.Location = new System.Drawing.Point(227, 184);
+            this.btnRad.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRad.Name = "btnRad";
+            this.btnRad.Size = new System.Drawing.Size(50, 30);
+            this.btnRad.TabIndex = 37;
+            this.btnRad.Text = "RAD";
+            this.btnRad.TextClor = System.Drawing.Color.DarkGray;
+            this.btnRad.UseVisualStyleBackColor = false;
+            this.btnRad.Click += new System.EventHandler(this.btnToRadian_Click);
             // 
-            // design27
+            // btnPi
             // 
-            this.design27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design27.BorderRadius = 20;
-            this.design27.BorderSize = 0;
-            this.design27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design27.FlatAppearance.BorderSize = 0;
-            this.design27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design27.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design27.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design27.Location = new System.Drawing.Point(170, 528);
-            this.design27.Margin = new System.Windows.Forms.Padding(0);
-            this.design27.Name = "design27";
-            this.design27.Size = new System.Drawing.Size(70, 50);
-            this.design27.TabIndex = 35;
-            this.design27.Text = ".";
-            this.design27.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design27.UseVisualStyleBackColor = false;
-            this.design27.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnPi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnPi.BorderRadius = 15;
+            this.btnPi.BorderSize = 0;
+            this.btnPi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPi.FlatAppearance.BorderSize = 0;
+            this.btnPi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPi.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnPi.Location = new System.Drawing.Point(277, 184);
+            this.btnPi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPi.Name = "btnPi";
+            this.btnPi.Size = new System.Drawing.Size(50, 30);
+            this.btnPi.TabIndex = 36;
+            this.btnPi.Text = "PI";
+            this.btnPi.TextClor = System.Drawing.Color.DarkGray;
+            this.btnPi.UseVisualStyleBackColor = false;
+            this.btnPi.Click += new System.EventHandler(this.btnPi_Click);
             // 
-            // design28
+            // btnFloatingPoint
             // 
-            this.design28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design28.BorderRadius = 20;
-            this.design28.BorderSize = 0;
-            this.design28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design28.FlatAppearance.BorderSize = 0;
-            this.design28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design28.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design28.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design28.Location = new System.Drawing.Point(90, 528);
-            this.design28.Margin = new System.Windows.Forms.Padding(0);
-            this.design28.Name = "design28";
-            this.design28.Size = new System.Drawing.Size(70, 50);
-            this.design28.TabIndex = 34;
-            this.design28.Text = "0";
-            this.design28.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design28.UseVisualStyleBackColor = false;
-            this.design28.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnFloatingPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnFloatingPoint.BorderRadius = 20;
+            this.btnFloatingPoint.BorderSize = 0;
+            this.btnFloatingPoint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFloatingPoint.FlatAppearance.BorderSize = 0;
+            this.btnFloatingPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFloatingPoint.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFloatingPoint.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFloatingPoint.Location = new System.Drawing.Point(170, 528);
+            this.btnFloatingPoint.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFloatingPoint.Name = "btnFloatingPoint";
+            this.btnFloatingPoint.Size = new System.Drawing.Size(70, 50);
+            this.btnFloatingPoint.TabIndex = 35;
+            this.btnFloatingPoint.Text = ".";
+            this.btnFloatingPoint.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnFloatingPoint.UseVisualStyleBackColor = false;
+            this.btnFloatingPoint.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design29
+            // btnZero
             // 
-            this.design29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design29.BorderRadius = 20;
-            this.design29.BorderSize = 0;
-            this.design29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design29.FlatAppearance.BorderSize = 0;
-            this.design29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design29.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design29.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design29.Location = new System.Drawing.Point(10, 528);
-            this.design29.Margin = new System.Windows.Forms.Padding(0);
-            this.design29.Name = "design29";
-            this.design29.Size = new System.Drawing.Size(70, 50);
-            this.design29.TabIndex = 33;
-            this.design29.Text = "+⁄-";
-            this.design29.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design29.UseVisualStyleBackColor = false;
+            this.btnZero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnZero.BorderRadius = 20;
+            this.btnZero.BorderSize = 0;
+            this.btnZero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnZero.FlatAppearance.BorderSize = 0;
+            this.btnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZero.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZero.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnZero.Location = new System.Drawing.Point(90, 528);
+            this.btnZero.Margin = new System.Windows.Forms.Padding(0);
+            this.btnZero.Name = "btnZero";
+            this.btnZero.Size = new System.Drawing.Size(70, 50);
+            this.btnZero.TabIndex = 34;
+            this.btnZero.Text = "0";
+            this.btnZero.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnZero.UseVisualStyleBackColor = false;
+            this.btnZero.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design30
+            // btnNegative
             // 
-            this.design30.BackColor = System.Drawing.Color.DodgerBlue;
-            this.design30.BorderRadius = 20;
-            this.design30.BorderSize = 0;
-            this.design30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design30.FlatAppearance.BorderSize = 0;
-            this.design30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design30.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design30.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design30.Location = new System.Drawing.Point(250, 528);
-            this.design30.Margin = new System.Windows.Forms.Padding(0);
-            this.design30.Name = "design30";
-            this.design30.Size = new System.Drawing.Size(70, 50);
-            this.design30.TabIndex = 32;
-            this.design30.Text = "=";
-            this.design30.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design30.UseVisualStyleBackColor = false;
-            this.design30.Click += new System.EventHandler(this.btnEqual_Click);
+            this.btnNegative.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNegative.BorderRadius = 20;
+            this.btnNegative.BorderSize = 0;
+            this.btnNegative.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNegative.FlatAppearance.BorderSize = 0;
+            this.btnNegative.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegative.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNegative.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNegative.Location = new System.Drawing.Point(10, 528);
+            this.btnNegative.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNegative.Name = "btnNegative";
+            this.btnNegative.Size = new System.Drawing.Size(70, 50);
+            this.btnNegative.TabIndex = 33;
+            this.btnNegative.Text = "+⁄-";
+            this.btnNegative.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnNegative.UseVisualStyleBackColor = false;
+            this.btnNegative.Click += new System.EventHandler(this.btnNegative_Click);
             // 
-            // design23
+            // btnEqual
             // 
-            this.design23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design23.BorderRadius = 20;
-            this.design23.BorderSize = 0;
-            this.design23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design23.FlatAppearance.BorderSize = 0;
-            this.design23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design23.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design23.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design23.Location = new System.Drawing.Point(169, 467);
-            this.design23.Margin = new System.Windows.Forms.Padding(0);
-            this.design23.Name = "design23";
-            this.design23.Size = new System.Drawing.Size(70, 50);
-            this.design23.TabIndex = 31;
-            this.design23.Text = "3";
-            this.design23.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design23.UseVisualStyleBackColor = false;
-            this.design23.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnEqual.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEqual.BorderRadius = 20;
+            this.btnEqual.BorderSize = 0;
+            this.btnEqual.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEqual.FlatAppearance.BorderSize = 0;
+            this.btnEqual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEqual.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEqual.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEqual.Location = new System.Drawing.Point(250, 528);
+            this.btnEqual.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEqual.Name = "btnEqual";
+            this.btnEqual.Size = new System.Drawing.Size(70, 50);
+            this.btnEqual.TabIndex = 32;
+            this.btnEqual.Text = "=";
+            this.btnEqual.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnEqual.UseVisualStyleBackColor = false;
+            this.btnEqual.Click += new System.EventHandler(this.btnEqual_Click);
             // 
-            // design24
+            // btnThree
             // 
-            this.design24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design24.BorderRadius = 20;
-            this.design24.BorderSize = 0;
-            this.design24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design24.FlatAppearance.BorderSize = 0;
-            this.design24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design24.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design24.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design24.Location = new System.Drawing.Point(89, 467);
-            this.design24.Margin = new System.Windows.Forms.Padding(0);
-            this.design24.Name = "design24";
-            this.design24.Size = new System.Drawing.Size(70, 50);
-            this.design24.TabIndex = 30;
-            this.design24.Text = "2";
-            this.design24.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design24.UseVisualStyleBackColor = false;
-            this.design24.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnThree.BorderRadius = 20;
+            this.btnThree.BorderSize = 0;
+            this.btnThree.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThree.FlatAppearance.BorderSize = 0;
+            this.btnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThree.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThree.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThree.Location = new System.Drawing.Point(169, 467);
+            this.btnThree.Margin = new System.Windows.Forms.Padding(0);
+            this.btnThree.Name = "btnThree";
+            this.btnThree.Size = new System.Drawing.Size(70, 50);
+            this.btnThree.TabIndex = 31;
+            this.btnThree.Text = "3";
+            this.btnThree.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnThree.UseVisualStyleBackColor = false;
+            this.btnThree.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design25
+            // btnTwo
             // 
-            this.design25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design25.BorderRadius = 20;
-            this.design25.BorderSize = 0;
-            this.design25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design25.FlatAppearance.BorderSize = 0;
-            this.design25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design25.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design25.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design25.Location = new System.Drawing.Point(9, 467);
-            this.design25.Margin = new System.Windows.Forms.Padding(0);
-            this.design25.Name = "design25";
-            this.design25.Size = new System.Drawing.Size(70, 50);
-            this.design25.TabIndex = 29;
-            this.design25.Text = "1";
-            this.design25.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design25.UseVisualStyleBackColor = false;
-            this.design25.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnTwo.BorderRadius = 20;
+            this.btnTwo.BorderSize = 0;
+            this.btnTwo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTwo.FlatAppearance.BorderSize = 0;
+            this.btnTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTwo.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTwo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTwo.Location = new System.Drawing.Point(89, 467);
+            this.btnTwo.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTwo.Name = "btnTwo";
+            this.btnTwo.Size = new System.Drawing.Size(70, 50);
+            this.btnTwo.TabIndex = 30;
+            this.btnTwo.Text = "2";
+            this.btnTwo.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnTwo.UseVisualStyleBackColor = false;
+            this.btnTwo.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design26
+            // btnOne
             // 
-            this.design26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.design26.BorderRadius = 20;
-            this.design26.BorderSize = 0;
-            this.design26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design26.FlatAppearance.BorderSize = 0;
-            this.design26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design26.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design26.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design26.Location = new System.Drawing.Point(249, 467);
-            this.design26.Margin = new System.Windows.Forms.Padding(0);
-            this.design26.Name = "design26";
-            this.design26.Size = new System.Drawing.Size(70, 50);
-            this.design26.TabIndex = 28;
-            this.design26.Text = "+";
-            this.design26.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design26.UseVisualStyleBackColor = false;
-            this.design26.Click += new System.EventHandler(this.btnOperator_Click);
+            this.btnOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnOne.BorderRadius = 20;
+            this.btnOne.BorderSize = 0;
+            this.btnOne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOne.FlatAppearance.BorderSize = 0;
+            this.btnOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOne.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOne.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnOne.Location = new System.Drawing.Point(9, 467);
+            this.btnOne.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOne.Name = "btnOne";
+            this.btnOne.Size = new System.Drawing.Size(70, 50);
+            this.btnOne.TabIndex = 29;
+            this.btnOne.Text = "1";
+            this.btnOne.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnOne.UseVisualStyleBackColor = false;
+            this.btnOne.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design19
+            // btnPlus
             // 
-            this.design19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design19.BorderRadius = 20;
-            this.design19.BorderSize = 0;
-            this.design19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design19.FlatAppearance.BorderSize = 0;
-            this.design19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design19.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design19.Location = new System.Drawing.Point(169, 407);
-            this.design19.Margin = new System.Windows.Forms.Padding(0);
-            this.design19.Name = "design19";
-            this.design19.Size = new System.Drawing.Size(70, 50);
-            this.design19.TabIndex = 27;
-            this.design19.Text = "6";
-            this.design19.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design19.UseVisualStyleBackColor = false;
-            this.design19.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnPlus.BorderRadius = 20;
+            this.btnPlus.BorderSize = 0;
+            this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlus.FlatAppearance.BorderSize = 0;
+            this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlus.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlus.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPlus.Location = new System.Drawing.Point(249, 467);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(70, 50);
+            this.btnPlus.TabIndex = 28;
+            this.btnPlus.Text = "+";
+            this.btnPlus.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnPlus.UseVisualStyleBackColor = false;
+            this.btnPlus.Click += new System.EventHandler(this.btnOperator_Click);
             // 
-            // design20
+            // btnSix
             // 
-            this.design20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design20.BorderRadius = 20;
-            this.design20.BorderSize = 0;
-            this.design20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design20.FlatAppearance.BorderSize = 0;
-            this.design20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design20.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design20.Location = new System.Drawing.Point(89, 407);
-            this.design20.Margin = new System.Windows.Forms.Padding(0);
-            this.design20.Name = "design20";
-            this.design20.Size = new System.Drawing.Size(70, 50);
-            this.design20.TabIndex = 26;
-            this.design20.Text = "5";
-            this.design20.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design20.UseVisualStyleBackColor = false;
-            this.design20.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnSix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnSix.BorderRadius = 20;
+            this.btnSix.BorderSize = 0;
+            this.btnSix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSix.FlatAppearance.BorderSize = 0;
+            this.btnSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSix.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSix.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSix.Location = new System.Drawing.Point(169, 407);
+            this.btnSix.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSix.Name = "btnSix";
+            this.btnSix.Size = new System.Drawing.Size(70, 50);
+            this.btnSix.TabIndex = 27;
+            this.btnSix.Text = "6";
+            this.btnSix.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnSix.UseVisualStyleBackColor = false;
+            this.btnSix.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design21
+            // btnFive
             // 
-            this.design21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design21.BorderRadius = 20;
-            this.design21.BorderSize = 0;
-            this.design21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design21.FlatAppearance.BorderSize = 0;
-            this.design21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design21.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design21.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design21.Location = new System.Drawing.Point(9, 407);
-            this.design21.Margin = new System.Windows.Forms.Padding(0);
-            this.design21.Name = "design21";
-            this.design21.Size = new System.Drawing.Size(70, 50);
-            this.design21.TabIndex = 25;
-            this.design21.Text = "4";
-            this.design21.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design21.UseVisualStyleBackColor = false;
-            this.design21.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnFive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnFive.BorderRadius = 20;
+            this.btnFive.BorderSize = 0;
+            this.btnFive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFive.FlatAppearance.BorderSize = 0;
+            this.btnFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFive.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFive.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFive.Location = new System.Drawing.Point(89, 407);
+            this.btnFive.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFive.Name = "btnFive";
+            this.btnFive.Size = new System.Drawing.Size(70, 50);
+            this.btnFive.TabIndex = 26;
+            this.btnFive.Text = "5";
+            this.btnFive.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnFive.UseVisualStyleBackColor = false;
+            this.btnFive.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design22
+            // btnFour
             // 
-            this.design22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.design22.BorderRadius = 20;
-            this.design22.BorderSize = 0;
-            this.design22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design22.FlatAppearance.BorderSize = 0;
-            this.design22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design22.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design22.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design22.Location = new System.Drawing.Point(249, 407);
-            this.design22.Margin = new System.Windows.Forms.Padding(0);
-            this.design22.Name = "design22";
-            this.design22.Size = new System.Drawing.Size(70, 50);
-            this.design22.TabIndex = 24;
-            this.design22.Text = "-";
-            this.design22.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design22.UseVisualStyleBackColor = false;
-            this.design22.Click += new System.EventHandler(this.btnOperator_Click);
+            this.btnFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnFour.BorderRadius = 20;
+            this.btnFour.BorderSize = 0;
+            this.btnFour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFour.FlatAppearance.BorderSize = 0;
+            this.btnFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFour.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFour.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFour.Location = new System.Drawing.Point(9, 407);
+            this.btnFour.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFour.Name = "btnFour";
+            this.btnFour.Size = new System.Drawing.Size(70, 50);
+            this.btnFour.TabIndex = 25;
+            this.btnFour.Text = "4";
+            this.btnFour.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnFour.UseVisualStyleBackColor = false;
+            this.btnFour.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design15
+            // btnExcept
             // 
-            this.design15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design15.BorderRadius = 20;
-            this.design15.BorderSize = 0;
-            this.design15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design15.FlatAppearance.BorderSize = 0;
-            this.design15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design15.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design15.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design15.Location = new System.Drawing.Point(170, 348);
-            this.design15.Margin = new System.Windows.Forms.Padding(0);
-            this.design15.Name = "design15";
-            this.design15.Size = new System.Drawing.Size(70, 50);
-            this.design15.TabIndex = 23;
-            this.design15.Text = "9";
-            this.design15.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design15.UseVisualStyleBackColor = false;
-            this.design15.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnExcept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnExcept.BorderRadius = 20;
+            this.btnExcept.BorderSize = 0;
+            this.btnExcept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcept.FlatAppearance.BorderSize = 0;
+            this.btnExcept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcept.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcept.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExcept.Location = new System.Drawing.Point(249, 407);
+            this.btnExcept.Margin = new System.Windows.Forms.Padding(0);
+            this.btnExcept.Name = "btnExcept";
+            this.btnExcept.Size = new System.Drawing.Size(70, 50);
+            this.btnExcept.TabIndex = 24;
+            this.btnExcept.Text = "-";
+            this.btnExcept.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnExcept.UseVisualStyleBackColor = false;
+            this.btnExcept.Click += new System.EventHandler(this.btnOperator_Click);
             // 
-            // design16
+            // btnNine
             // 
-            this.design16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design16.BorderRadius = 20;
-            this.design16.BorderSize = 0;
-            this.design16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design16.FlatAppearance.BorderSize = 0;
-            this.design16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design16.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design16.Location = new System.Drawing.Point(90, 348);
-            this.design16.Margin = new System.Windows.Forms.Padding(0);
-            this.design16.Name = "design16";
-            this.design16.Size = new System.Drawing.Size(70, 50);
-            this.design16.TabIndex = 22;
-            this.design16.Text = "8";
-            this.design16.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design16.UseVisualStyleBackColor = false;
-            this.design16.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnNine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNine.BorderRadius = 20;
+            this.btnNine.BorderSize = 0;
+            this.btnNine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNine.FlatAppearance.BorderSize = 0;
+            this.btnNine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNine.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNine.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNine.Location = new System.Drawing.Point(170, 348);
+            this.btnNine.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNine.Name = "btnNine";
+            this.btnNine.Size = new System.Drawing.Size(70, 50);
+            this.btnNine.TabIndex = 23;
+            this.btnNine.Text = "9";
+            this.btnNine.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnNine.UseVisualStyleBackColor = false;
+            this.btnNine.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design17
+            // btnEight
             // 
-            this.design17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design17.BorderRadius = 20;
-            this.design17.BorderSize = 0;
-            this.design17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design17.FlatAppearance.BorderSize = 0;
-            this.design17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design17.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design17.Location = new System.Drawing.Point(10, 348);
-            this.design17.Margin = new System.Windows.Forms.Padding(0);
-            this.design17.Name = "design17";
-            this.design17.Size = new System.Drawing.Size(70, 50);
-            this.design17.TabIndex = 21;
-            this.design17.Text = "7";
-            this.design17.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design17.UseVisualStyleBackColor = false;
-            this.design17.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnEight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnEight.BorderRadius = 20;
+            this.btnEight.BorderSize = 0;
+            this.btnEight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEight.FlatAppearance.BorderSize = 0;
+            this.btnEight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEight.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEight.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEight.Location = new System.Drawing.Point(90, 348);
+            this.btnEight.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEight.Name = "btnEight";
+            this.btnEight.Size = new System.Drawing.Size(70, 50);
+            this.btnEight.TabIndex = 22;
+            this.btnEight.Text = "8";
+            this.btnEight.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnEight.UseVisualStyleBackColor = false;
+            this.btnEight.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design18
+            // btnSeven
             // 
-            this.design18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.design18.BorderRadius = 20;
-            this.design18.BorderSize = 0;
-            this.design18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design18.FlatAppearance.BorderSize = 0;
-            this.design18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design18.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design18.Location = new System.Drawing.Point(250, 348);
-            this.design18.Margin = new System.Windows.Forms.Padding(0);
-            this.design18.Name = "design18";
-            this.design18.Size = new System.Drawing.Size(70, 50);
-            this.design18.TabIndex = 20;
-            this.design18.Text = "×";
-            this.design18.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design18.UseVisualStyleBackColor = false;
-            this.design18.Click += new System.EventHandler(this.btnOperator_Click);
+            this.btnSeven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnSeven.BorderRadius = 20;
+            this.btnSeven.BorderSize = 0;
+            this.btnSeven.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeven.FlatAppearance.BorderSize = 0;
+            this.btnSeven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeven.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeven.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSeven.Location = new System.Drawing.Point(10, 348);
+            this.btnSeven.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSeven.Name = "btnSeven";
+            this.btnSeven.Size = new System.Drawing.Size(70, 50);
+            this.btnSeven.TabIndex = 21;
+            this.btnSeven.Text = "7";
+            this.btnSeven.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnSeven.UseVisualStyleBackColor = false;
+            this.btnSeven.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design11
+            // btnMultiply
             // 
-            this.design11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design11.BorderRadius = 20;
-            this.design11.BorderSize = 0;
-            this.design11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design11.FlatAppearance.BorderSize = 0;
-            this.design11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design11.Location = new System.Drawing.Point(170, 288);
-            this.design11.Margin = new System.Windows.Forms.Padding(0);
-            this.design11.Name = "design11";
-            this.design11.Size = new System.Drawing.Size(70, 50);
-            this.design11.TabIndex = 19;
-            this.design11.Text = "√";
-            this.design11.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design11.UseVisualStyleBackColor = false;
-            this.design11.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnMultiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnMultiply.BorderRadius = 20;
+            this.btnMultiply.BorderSize = 0;
+            this.btnMultiply.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMultiply.FlatAppearance.BorderSize = 0;
+            this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiply.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMultiply.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMultiply.Location = new System.Drawing.Point(250, 348);
+            this.btnMultiply.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(70, 50);
+            this.btnMultiply.TabIndex = 20;
+            this.btnMultiply.Text = "×";
+            this.btnMultiply.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnMultiply.UseVisualStyleBackColor = false;
+            this.btnMultiply.Click += new System.EventHandler(this.btnOperator_Click);
             // 
-            // design12
+            // btnSquareRoot
             // 
-            this.design12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design12.BorderRadius = 20;
-            this.design12.BorderSize = 0;
-            this.design12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design12.FlatAppearance.BorderSize = 0;
-            this.design12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design12.Location = new System.Drawing.Point(90, 288);
-            this.design12.Margin = new System.Windows.Forms.Padding(0);
-            this.design12.Name = "design12";
-            this.design12.Size = new System.Drawing.Size(70, 50);
-            this.design12.TabIndex = 18;
-            this.design12.Text = "^2";
-            this.design12.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design12.UseVisualStyleBackColor = false;
-            this.design12.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnSquareRoot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnSquareRoot.BorderRadius = 20;
+            this.btnSquareRoot.BorderSize = 0;
+            this.btnSquareRoot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSquareRoot.FlatAppearance.BorderSize = 0;
+            this.btnSquareRoot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSquareRoot.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSquareRoot.Location = new System.Drawing.Point(170, 288);
+            this.btnSquareRoot.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSquareRoot.Name = "btnSquareRoot";
+            this.btnSquareRoot.Size = new System.Drawing.Size(70, 50);
+            this.btnSquareRoot.TabIndex = 19;
+            this.btnSquareRoot.Text = "√";
+            this.btnSquareRoot.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnSquareRoot.UseVisualStyleBackColor = false;
+            this.btnSquareRoot.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design13
+            // btnSquare
             // 
-            this.design13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.design13.BorderRadius = 20;
-            this.design13.BorderSize = 0;
-            this.design13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design13.FlatAppearance.BorderSize = 0;
-            this.design13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design13.Location = new System.Drawing.Point(11, 288);
-            this.design13.Margin = new System.Windows.Forms.Padding(0);
-            this.design13.Name = "design13";
-            this.design13.Size = new System.Drawing.Size(70, 50);
-            this.design13.TabIndex = 17;
-            this.design13.Text = "1/x";
-            this.design13.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design13.UseVisualStyleBackColor = false;
-            this.design13.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnSquare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnSquare.BorderRadius = 20;
+            this.btnSquare.BorderSize = 0;
+            this.btnSquare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSquare.FlatAppearance.BorderSize = 0;
+            this.btnSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSquare.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSquare.Location = new System.Drawing.Point(90, 288);
+            this.btnSquare.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSquare.Name = "btnSquare";
+            this.btnSquare.Size = new System.Drawing.Size(70, 50);
+            this.btnSquare.TabIndex = 18;
+            this.btnSquare.Text = "^2";
+            this.btnSquare.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnSquare.UseVisualStyleBackColor = false;
+            this.btnSquare.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design14
+            // btnFraction
             // 
-            this.design14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.design14.BorderRadius = 20;
-            this.design14.BorderSize = 0;
-            this.design14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design14.FlatAppearance.BorderSize = 0;
-            this.design14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design14.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.design14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.design14.Location = new System.Drawing.Point(250, 288);
-            this.design14.Margin = new System.Windows.Forms.Padding(0);
-            this.design14.Name = "design14";
-            this.design14.Size = new System.Drawing.Size(70, 50);
-            this.design14.TabIndex = 16;
-            this.design14.Text = "÷";
-            this.design14.TextClor = System.Drawing.Color.WhiteSmoke;
-            this.design14.UseVisualStyleBackColor = false;
-            this.design14.Click += new System.EventHandler(this.btnOperator_Click);
+            this.btnFraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnFraction.BorderRadius = 20;
+            this.btnFraction.BorderSize = 0;
+            this.btnFraction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFraction.FlatAppearance.BorderSize = 0;
+            this.btnFraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFraction.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnFraction.Location = new System.Drawing.Point(11, 288);
+            this.btnFraction.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFraction.Name = "btnFraction";
+            this.btnFraction.Size = new System.Drawing.Size(70, 50);
+            this.btnFraction.TabIndex = 17;
+            this.btnFraction.Text = "1/x";
+            this.btnFraction.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnFraction.UseVisualStyleBackColor = false;
+            this.btnFraction.Click += new System.EventHandler(this.btnFraction_Click);
+            // 
+            // btnDivide
+            // 
+            this.btnDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnDivide.BorderRadius = 20;
+            this.btnDivide.BorderSize = 0;
+            this.btnDivide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDivide.FlatAppearance.BorderSize = 0;
+            this.btnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDivide.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDivide.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDivide.Location = new System.Drawing.Point(250, 288);
+            this.btnDivide.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDivide.Name = "btnDivide";
+            this.btnDivide.Size = new System.Drawing.Size(70, 50);
+            this.btnDivide.TabIndex = 16;
+            this.btnDivide.Text = "÷";
+            this.btnDivide.TextClor = System.Drawing.Color.WhiteSmoke;
+            this.btnDivide.UseVisualStyleBackColor = false;
+            this.btnDivide.Click += new System.EventHandler(this.btnOperator_Click);
             // 
             // btnC
             // 
@@ -757,81 +777,81 @@
             this.btnOpenParentheses.UseVisualStyleBackColor = false;
             this.btnOpenParentheses.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design8
+            // btnCos
             // 
-            this.design8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design8.BorderRadius = 15;
-            this.design8.BorderSize = 0;
-            this.design8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design8.FlatAppearance.BorderSize = 0;
-            this.design8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design8.ForeColor = System.Drawing.Color.DarkGray;
-            this.design8.Location = new System.Drawing.Point(56, 184);
-            this.design8.Margin = new System.Windows.Forms.Padding(0);
-            this.design8.Name = "design8";
-            this.design8.Size = new System.Drawing.Size(50, 30);
-            this.design8.TabIndex = 11;
-            this.design8.Text = "cos⁡";
-            this.design8.TextClor = System.Drawing.Color.DarkGray;
-            this.design8.UseVisualStyleBackColor = false;
-            this.design8.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnCos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnCos.BorderRadius = 15;
+            this.btnCos.BorderSize = 0;
+            this.btnCos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCos.FlatAppearance.BorderSize = 0;
+            this.btnCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCos.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCos.Location = new System.Drawing.Point(56, 184);
+            this.btnCos.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCos.Name = "btnCos";
+            this.btnCos.Size = new System.Drawing.Size(50, 30);
+            this.btnCos.TabIndex = 11;
+            this.btnCos.Text = "cos⁡";
+            this.btnCos.TextClor = System.Drawing.Color.DarkGray;
+            this.btnCos.UseVisualStyleBackColor = false;
+            this.btnCos.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design7
+            // btnTan
             // 
-            this.design7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design7.BorderRadius = 15;
-            this.design7.BorderSize = 0;
-            this.design7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design7.FlatAppearance.BorderSize = 0;
-            this.design7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design7.ForeColor = System.Drawing.Color.DarkGray;
-            this.design7.Location = new System.Drawing.Point(112, 184);
-            this.design7.Margin = new System.Windows.Forms.Padding(0);
-            this.design7.Name = "design7";
-            this.design7.Size = new System.Drawing.Size(50, 30);
-            this.design7.TabIndex = 10;
-            this.design7.Text = "tan⁡";
-            this.design7.TextClor = System.Drawing.Color.DarkGray;
-            this.design7.UseVisualStyleBackColor = false;
-            this.design7.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnTan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnTan.BorderRadius = 15;
+            this.btnTan.BorderSize = 0;
+            this.btnTan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTan.FlatAppearance.BorderSize = 0;
+            this.btnTan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTan.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnTan.Location = new System.Drawing.Point(112, 184);
+            this.btnTan.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTan.Name = "btnTan";
+            this.btnTan.Size = new System.Drawing.Size(50, 30);
+            this.btnTan.TabIndex = 10;
+            this.btnTan.Text = "tan⁡";
+            this.btnTan.TextClor = System.Drawing.Color.DarkGray;
+            this.btnTan.UseVisualStyleBackColor = false;
+            this.btnTan.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design6
+            // btnSin
             // 
-            this.design6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design6.BorderRadius = 15;
-            this.design6.BorderSize = 0;
-            this.design6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design6.FlatAppearance.BorderSize = 0;
-            this.design6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design6.ForeColor = System.Drawing.Color.DarkGray;
-            this.design6.Location = new System.Drawing.Point(0, 184);
-            this.design6.Margin = new System.Windows.Forms.Padding(0);
-            this.design6.Name = "design6";
-            this.design6.Size = new System.Drawing.Size(50, 30);
-            this.design6.TabIndex = 9;
-            this.design6.Text = "sin⁡";
-            this.design6.TextClor = System.Drawing.Color.DarkGray;
-            this.design6.UseVisualStyleBackColor = false;
-            this.design6.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnSin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnSin.BorderRadius = 15;
+            this.btnSin.BorderSize = 0;
+            this.btnSin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSin.FlatAppearance.BorderSize = 0;
+            this.btnSin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSin.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnSin.Location = new System.Drawing.Point(0, 184);
+            this.btnSin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSin.Name = "btnSin";
+            this.btnSin.Size = new System.Drawing.Size(50, 30);
+            this.btnSin.TabIndex = 9;
+            this.btnSin.Text = "sin⁡";
+            this.btnSin.TextClor = System.Drawing.Color.DarkGray;
+            this.btnSin.UseVisualStyleBackColor = false;
+            this.btnSin.Click += new System.EventHandler(this.btnNumber_Click);
             // 
-            // design5
+            // btnCot
             // 
-            this.design5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design5.BorderRadius = 15;
-            this.design5.BorderSize = 0;
-            this.design5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design5.FlatAppearance.BorderSize = 0;
-            this.design5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design5.ForeColor = System.Drawing.Color.DarkGray;
-            this.design5.Location = new System.Drawing.Point(168, 184);
-            this.design5.Margin = new System.Windows.Forms.Padding(0);
-            this.design5.Name = "design5";
-            this.design5.Size = new System.Drawing.Size(50, 30);
-            this.design5.TabIndex = 8;
-            this.design5.Text = "cot⁡";
-            this.design5.TextClor = System.Drawing.Color.DarkGray;
-            this.design5.UseVisualStyleBackColor = false;
-            this.design5.Click += new System.EventHandler(this.btnNumber_Click);
+            this.btnCot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnCot.BorderRadius = 15;
+            this.btnCot.BorderSize = 0;
+            this.btnCot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCot.FlatAppearance.BorderSize = 0;
+            this.btnCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCot.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCot.Location = new System.Drawing.Point(168, 184);
+            this.btnCot.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCot.Name = "btnCot";
+            this.btnCot.Size = new System.Drawing.Size(50, 30);
+            this.btnCot.TabIndex = 8;
+            this.btnCot.Text = "cot⁡";
+            this.btnCot.TextClor = System.Drawing.Color.DarkGray;
+            this.btnCot.UseVisualStyleBackColor = false;
+            this.btnCot.Click += new System.EventHandler(this.btnNumber_Click);
             // 
             // design4
             // 
@@ -874,59 +894,40 @@
             this.ellipseControl1.CornerRadius = 20;
             this.ellipseControl1.TargetControl = this;
             // 
-            // design1
-            // 
-            this.design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.design1.BorderRadius = 15;
-            this.design1.BorderSize = 0;
-            this.design1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.design1.FlatAppearance.BorderSize = 0;
-            this.design1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.design1.ForeColor = System.Drawing.Color.DarkGray;
-            this.design1.Location = new System.Drawing.Point(227, 184);
-            this.design1.Margin = new System.Windows.Forms.Padding(0);
-            this.design1.Name = "design1";
-            this.design1.Size = new System.Drawing.Size(50, 30);
-            this.design1.TabIndex = 37;
-            this.design1.Text = "RAD";
-            this.design1.TextClor = System.Drawing.Color.DarkGray;
-            this.design1.UseVisualStyleBackColor = false;
-            this.design1.Click += new System.EventHandler(this.btnToRadian_Click);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(327, 600);
-            this.Controls.Add(this.design1);
-            this.Controls.Add(this.design2);
-            this.Controls.Add(this.design27);
-            this.Controls.Add(this.design28);
-            this.Controls.Add(this.design29);
-            this.Controls.Add(this.design30);
-            this.Controls.Add(this.design23);
-            this.Controls.Add(this.design24);
-            this.Controls.Add(this.design25);
-            this.Controls.Add(this.design26);
-            this.Controls.Add(this.design19);
-            this.Controls.Add(this.design20);
-            this.Controls.Add(this.design21);
-            this.Controls.Add(this.design22);
-            this.Controls.Add(this.design15);
-            this.Controls.Add(this.design16);
-            this.Controls.Add(this.design17);
-            this.Controls.Add(this.design18);
-            this.Controls.Add(this.design11);
-            this.Controls.Add(this.design12);
-            this.Controls.Add(this.design13);
-            this.Controls.Add(this.design14);
+            this.Controls.Add(this.btnRad);
+            this.Controls.Add(this.btnPi);
+            this.Controls.Add(this.btnFloatingPoint);
+            this.Controls.Add(this.btnZero);
+            this.Controls.Add(this.btnNegative);
+            this.Controls.Add(this.btnEqual);
+            this.Controls.Add(this.btnThree);
+            this.Controls.Add(this.btnTwo);
+            this.Controls.Add(this.btnOne);
+            this.Controls.Add(this.btnPlus);
+            this.Controls.Add(this.btnSix);
+            this.Controls.Add(this.btnFive);
+            this.Controls.Add(this.btnFour);
+            this.Controls.Add(this.btnExcept);
+            this.Controls.Add(this.btnNine);
+            this.Controls.Add(this.btnEight);
+            this.Controls.Add(this.btnSeven);
+            this.Controls.Add(this.btnMultiply);
+            this.Controls.Add(this.btnSquareRoot);
+            this.Controls.Add(this.btnSquare);
+            this.Controls.Add(this.btnFraction);
+            this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.bntClosedParentheses);
             this.Controls.Add(this.btnOpenParentheses);
-            this.Controls.Add(this.design8);
-            this.Controls.Add(this.design7);
-            this.Controls.Add(this.design6);
-            this.Controls.Add(this.design5);
+            this.Controls.Add(this.btnCos);
+            this.Controls.Add(this.btnTan);
+            this.Controls.Add(this.btnSin);
+            this.Controls.Add(this.btnCot);
             this.Controls.Add(this.design4);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtScreenResult);
@@ -942,7 +943,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.pnHistory.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -955,50 +956,50 @@
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.Panel pnHistory;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMiniature;
+        private System.Windows.Forms.Button btnZoom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtScreenExpression;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private customButton.EllipseControl ellipseControl1;
         private customButton.Design btnDelete;
-        private customButton.Design design8;
-        private customButton.Design design7;
-        private customButton.Design design6;
-        private customButton.Design design5;
+        private customButton.Design btnCos;
+        private customButton.Design btnTan;
+        private customButton.Design btnSin;
+        private customButton.Design btnCot;
         private customButton.Design design4;
         private customButton.Design btnC;
         private customButton.Design bntClosedParentheses;
         private customButton.Design btnOpenParentheses;
-        private customButton.Design design11;
-        private customButton.Design design12;
-        private customButton.Design design13;
-        private customButton.Design design14;
-        private customButton.Design design15;
-        private customButton.Design design16;
-        private customButton.Design design17;
-        private customButton.Design design18;
-        private customButton.Design design23;
-        private customButton.Design design24;
-        private customButton.Design design25;
-        private customButton.Design design26;
-        private customButton.Design design19;
-        private customButton.Design design20;
-        private customButton.Design design21;
-        private customButton.Design design22;
-        private customButton.Design design27;
-        private customButton.Design design28;
-        private customButton.Design design29;
-        private customButton.Design design30;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private customButton.Design design31;
-        private customButton.Design design32;
+        private customButton.Design btnSquareRoot;
+        private customButton.Design btnSquare;
+        private customButton.Design btnFraction;
+        private customButton.Design btnDivide;
+        private customButton.Design btnNine;
+        private customButton.Design btnEight;
+        private customButton.Design btnSeven;
+        private customButton.Design btnMultiply;
+        private customButton.Design btnThree;
+        private customButton.Design btnTwo;
+        private customButton.Design btnOne;
+        private customButton.Design btnPlus;
+        private customButton.Design btnSix;
+        private customButton.Design btnFive;
+        private customButton.Design btnFour;
+        private customButton.Design btnExcept;
+        private customButton.Design btnFloatingPoint;
+        private customButton.Design btnZero;
+        private customButton.Design btnNegative;
+        private customButton.Design btnEqual;
+        private System.Windows.Forms.PictureBox picIcon;
+        private System.Windows.Forms.Label lblCalculator;
+        private System.Windows.Forms.Label lblTeam;
+        private customButton.Design btnHistory;
+        private customButton.Design btnOption;
         private System.Windows.Forms.TextBox txtScreenResult;
-        private customButton.Design design2;
-        private customButton.Design design1;
+        private customButton.Design btnPi;
+        private customButton.Design btnRad;
     }
 }
 

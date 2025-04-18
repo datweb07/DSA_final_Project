@@ -24,8 +24,8 @@ namespace finalProject
         private void Form1_Load(object sender, EventArgs e)
         {
             isRadianMode = false;  //mặc định tính toán với chế độ DEG
-            design1.Text = "RAD";
-            design1.ForeColor = Color.Red;
+            btnRad.Text = "RAD";
+            btnRad.ForeColor = Color.Red;
         }
 
         private void pnHistory_Paint(object sender, PaintEventArgs e)
@@ -283,8 +283,8 @@ namespace finalProject
 
         private void UpdateAngleModeIndicator()
         {
-            design1.Text = isRadianMode ? "RAD" : "DEG";
-            design1.ForeColor = isRadianMode ? Color.Red : Color.Black;
+            btnRad.Text = isRadianMode ? "RAD" : "DEG";
+            btnRad.ForeColor = isRadianMode ? Color.Red : Color.Black;
         }
 
 
@@ -298,6 +298,27 @@ namespace finalProject
             else
             {
                 txtScreenResult.Text = txtScreenResult.Text + Math.PI.ToString();
+            }
+        }
+
+        private void btnFraction_Click(object sender, EventArgs e)
+        {
+            // Thay thế số hiện tại bằng 1/x
+            if (txtScreenResult.Text == "0")
+            {
+                txtScreenResult.Text = "0";
+            }
+            else
+            {
+                double currentValue = double.Parse(txtScreenResult.Text);
+                if (currentValue != 0)
+                {
+                    txtScreenResult.Text = (1 / currentValue).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không tính toán với số 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

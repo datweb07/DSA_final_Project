@@ -77,7 +77,7 @@ namespace finalProject
             }
         }
 
-        private static List<string> TokenizeExpression(string expression)
+        public static List<string> TokenizeExpression(string expression)
         {
             List<string> tokens = new List<string>();
             string currentToken = "";
@@ -199,7 +199,7 @@ namespace finalProject
         }
 
         // check if token is a trigonometric function
-        private static bool IsTrigFunction(string token)
+        public static bool IsTrigFunction(string token)
         {
             return token == "sin" || token == "cos" || token == "tan" || token == "cot";
         }
@@ -307,7 +307,7 @@ namespace finalProject
             }
         }
 
-        private static double ProcessOperator(char op, double first, double second)
+        public static double ProcessOperator(char op, double first, double second)
         {
             switch (op)
             {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="finalProject.Calculator">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <NestedTypes>
@@ -15,14 +15,14 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAEAAAAAAA=</HashCode>
       <FileName>Calculator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="finalProject.Form1">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ADQwBgAAEGAAAFMABAOAAKjDGaC/AQhkAAbQdQBkAQQ=</HashCode>
+      <HashCode>DCCAICCA2GYAAEQxFAeCACgCIaSiBAwEKAYyBRiUAQQ=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -35,8 +35,20 @@
   </Class>
   <Class Name="finalProject.SpecialCalculator">
     <Position X="8.5" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="finalProject.SpecialCalculator.Node" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SpecialCalculator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="finalProject.SpecialCalculator.MyStack&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SpecialCalculator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAADAAAAAgAAAAAAAAAAAQAAAAAAAAAgAEAAIAAAA=</HashCode>
       <FileName>SpecialCalculator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,7 +73,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="finalProject.Properties.Settings">
-    <Position X="10.75" Y="1.5" Width="1.5" />
+    <Position X="10.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>

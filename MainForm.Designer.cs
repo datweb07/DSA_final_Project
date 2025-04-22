@@ -1,6 +1,6 @@
 ﻿namespace finalProject
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnHeader = new System.Windows.Forms.Panel();
             this.lblCalculator = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.btnMiniature = new System.Windows.Forms.Button();
             this.btnZoom = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.pnHistory = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnOption = new customButton.Design();
-            this.btnHistory = new customButton.Design();
             this.lblTeam = new System.Windows.Forms.Label();
             this.txtScreenExpression = new System.Windows.Forms.TextBox();
             this.txtScreenResult = new System.Windows.Forms.TextBox();
@@ -75,10 +70,11 @@
             this.btnCot = new customButton.Design();
             this.design4 = new customButton.Design();
             this.btnDelete = new customButton.Design();
+            this.btnOption = new customButton.Design();
+            this.btnHistory = new customButton.Design();
             this.ellipseControl1 = new customButton.EllipseControl();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
-            this.pnHistory.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,46 +154,6 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // pnHistory
-            // 
-            this.pnHistory.Controls.Add(this.richTextBox1);
-            this.pnHistory.Controls.Add(this.button3);
-            this.pnHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnHistory.Location = new System.Drawing.Point(0, 595);
-            this.pnHistory.Margin = new System.Windows.Forms.Padding(0);
-            this.pnHistory.Name = "pnHistory";
-            this.pnHistory.Size = new System.Drawing.Size(327, 5);
-            this.pnHistory.TabIndex = 1;
-            this.pnHistory.Paint += new System.Windows.Forms.PaintEventHandler(this.pnHistory_Paint);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox1.Size = new System.Drawing.Size(327, 0);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, -45);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(327, 50);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnOption);
@@ -209,38 +165,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 36);
             this.panel1.TabIndex = 2;
-            // 
-            // btnOption
-            // 
-            this.btnOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.btnOption.BorderRadius = 20;
-            this.btnOption.BorderSize = 0;
-            this.btnOption.FlatAppearance.BorderSize = 0;
-            this.btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOption.ForeColor = System.Drawing.Color.White;
-            this.btnOption.Image = ((System.Drawing.Image)(resources.GetObject("btnOption.Image")));
-            this.btnOption.Location = new System.Drawing.Point(9, 0);
-            this.btnOption.Name = "btnOption";
-            this.btnOption.Size = new System.Drawing.Size(50, 36);
-            this.btnOption.TabIndex = 37;
-            this.btnOption.TextClor = System.Drawing.Color.White;
-            this.btnOption.UseVisualStyleBackColor = false;
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.btnHistory.BorderRadius = 20;
-            this.btnHistory.BorderSize = 0;
-            this.btnHistory.FlatAppearance.BorderSize = 0;
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.ForeColor = System.Drawing.Color.White;
-            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
-            this.btnHistory.Location = new System.Drawing.Point(265, 0);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(50, 36);
-            this.btnHistory.TabIndex = 36;
-            this.btnHistory.TextClor = System.Drawing.Color.White;
-            this.btnHistory.UseVisualStyleBackColor = false;
             // 
             // lblTeam
             // 
@@ -638,7 +562,7 @@
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(70, 50);
             this.btnMultiply.TabIndex = 20;
-            this.btnMultiply.Text = "×";
+            this.btnMultiply.Text = "*";
             this.btnMultiply.TextClor = System.Drawing.Color.WhiteSmoke;
             this.btnMultiply.UseVisualStyleBackColor = false;
             this.btnMultiply.Click += new System.EventHandler(this.btnOperator_Click);
@@ -715,7 +639,7 @@
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(70, 50);
             this.btnDivide.TabIndex = 16;
-            this.btnDivide.Text = "÷";
+            this.btnDivide.Text = "/";
             this.btnDivide.TextClor = System.Drawing.Color.WhiteSmoke;
             this.btnDivide.UseVisualStyleBackColor = false;
             this.btnDivide.Click += new System.EventHandler(this.btnOperator_Click);
@@ -889,6 +813,38 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnOption
+            // 
+            this.btnOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnOption.BorderRadius = 20;
+            this.btnOption.BorderSize = 0;
+            this.btnOption.FlatAppearance.BorderSize = 0;
+            this.btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOption.ForeColor = System.Drawing.Color.White;
+            this.btnOption.Image = ((System.Drawing.Image)(resources.GetObject("btnOption.Image")));
+            this.btnOption.Location = new System.Drawing.Point(9, 0);
+            this.btnOption.Name = "btnOption";
+            this.btnOption.Size = new System.Drawing.Size(50, 36);
+            this.btnOption.TabIndex = 37;
+            this.btnOption.TextClor = System.Drawing.Color.White;
+            this.btnOption.UseVisualStyleBackColor = false;
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.btnHistory.BorderRadius = 20;
+            this.btnHistory.BorderSize = 0;
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.ForeColor = System.Drawing.Color.White;
+            this.btnHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.Image")));
+            this.btnHistory.Location = new System.Drawing.Point(265, 0);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(50, 36);
+            this.btnHistory.TabIndex = 36;
+            this.btnHistory.TextClor = System.Drawing.Color.White;
+            this.btnHistory.UseVisualStyleBackColor = false;
+            // 
             // ellipseControl1
             // 
             this.ellipseControl1.CornerRadius = 20;
@@ -933,7 +889,6 @@
             this.Controls.Add(this.txtScreenResult);
             this.Controls.Add(this.txtScreenExpression);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnHistory);
             this.Controls.Add(this.pnHeader);
             this.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -944,7 +899,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
-            this.pnHistory.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -954,14 +908,11 @@
         #endregion
 
         private System.Windows.Forms.Panel pnHeader;
-        private System.Windows.Forms.Panel pnHistory;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMiniature;
         private System.Windows.Forms.Button btnZoom;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtScreenExpression;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private customButton.EllipseControl ellipseControl1;
         private customButton.Design btnDelete;
         private customButton.Design btnCos;

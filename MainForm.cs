@@ -11,12 +11,12 @@ using System.Drawing.Drawing2D;
 
 namespace finalProject
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         // Flag to determine which calculator to use (normal or special)
         private bool useSpecialCalculator = false;
         private bool isRadianMode;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }

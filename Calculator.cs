@@ -8,66 +8,16 @@ using System.Web;
 
 namespace finalProject
 {
-    public class Calculator
+    public class Calculator : MyStack<object>
     {
-        public class Node
-        {
-            public Node next;
-            public object data;
-        }
-
-        public class MyStack<T>
-        {
-            private Node top;
-
-            public bool IsEmpty()
-            {
-                return top == null;
-            }
-
-            public void Push(object ele)
-            {
-                Node n = new Node();
-                n.data = ele;
-                n.next = top;
-                top = n;
-            }
-
-            public Node Pop()
-            {
-                if (top == null)
-                    return null;
-                Node d = top;
-                top = top.next;
-                return d;
-            }
-
-            public object Peek()
-            {
-                return top.data;
-            }
-
-            public int Count()
-            {
-                int count = 0;
-                Node current = top;
-                while (current != null)
-                {
-                    count++;
-                    current = current.next;
-                }
-                return count;
-            }
-        }
-
         public static int DoUuTien(char c)
         {
             switch (c)
             {
                 case '√': return 4;
                 case '^': return 3;
-                case '×':
-                case '÷': return 2;
+                case '*':
+                case '/': return 2;
                 case '+':
                 case '-': return 1;
                 default: return 0;
@@ -88,7 +38,7 @@ namespace finalProject
                 {
                     number += c;
                 }
-                else if (c == '-' && (i == 0 || infix[i - 1] == '(' || "+-×÷^".Contains(infix[i - 1])))
+                else if (c == '-' && (i == 0 || infix[i - 1] == '(' || "+-*/^".Contains(infix[i - 1])))
                 {
                     // Số âm
                     number += c;
@@ -201,8 +151,8 @@ namespace finalProject
                             case '^': result = Math.Pow(first_op, second_op); break;
                             case '+': result = first_op + second_op; break;
                             case '-': result = first_op - second_op; break;
-                            case '×': result = first_op * second_op; break;
-                            case '÷':
+                            case '*': result = first_op * second_op; break;
+                            case '/':
                                 if (second_op == 0)
                                     throw new DivideByZeroException();
                                 result = first_op / second_op; break;

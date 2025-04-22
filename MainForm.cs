@@ -28,11 +28,6 @@ namespace finalProject
             btnRad.ForeColor = Color.Red;
         }
 
-        private void pnHistory_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnC_Click(object sender, EventArgs e)
         {
             txtScreenResult.Text = "0";
@@ -47,11 +42,6 @@ namespace finalProject
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void txtScreenResult_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNumber_Click(object sender, EventArgs e)

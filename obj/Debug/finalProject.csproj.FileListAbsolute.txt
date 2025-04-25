@@ -2,9 +2,9 @@ C:\Users\THANH DAT\source\repos\finalProject\bin\Debug\finalProject.exe.config
 C:\Users\THANH DAT\source\repos\finalProject\bin\Debug\finalProject.exe
 C:\Users\THANH DAT\source\repos\finalProject\bin\Debug\finalProject.pdb
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.csproj.AssemblyReference.cache
-C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.Form1.resources
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.Properties.Resources.resources
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.csproj.GenerateResource.cache
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.csproj.CoreCompileInputs.cache
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.exe
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.pdb
+C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.MainForm.resources

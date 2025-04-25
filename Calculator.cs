@@ -8,7 +8,7 @@ using System.Web;
 
 namespace finalProject
 {
-    public class Calculator : MyStack<object>
+    public class Calculator : MyStack<Node>
     {
         public static int DoUuTien(char c)
         {
@@ -69,12 +69,12 @@ namespace finalProject
                     }
                     else // toán tử
                     {
-                        string token = c.ToString();
-                        while (!stack.IsEmpty() && DoUuTien(((string)stack.Peek())[0]) >= DoUuTien(token[0]))
+                        string cur = c.ToString();
+                        while (!stack.IsEmpty() && DoUuTien(((string)stack.Peek())[0]) >= DoUuTien(cur[0]))
                         {
                             postFix.Add(stack.Pop().data.ToString());
                         }
-                        stack.Push(token);
+                        stack.Push(cur);
                     }
                 }
             }
@@ -122,12 +122,6 @@ namespace finalProject
                 }
                 else  // Toán tử
                 {
-                    if (currentNumber != "")
-                    {
-                        stack.Push(double.Parse(currentNumber));
-                        currentNumber = "";
-                    }
-
                     if (ch == '√')
                     {
                         if (stack.Count() < 1)

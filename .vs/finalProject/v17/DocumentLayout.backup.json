@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|c:\\users\\thanh dat\\source\\repos\\finalproject\\specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|c:\\users\\thanh dat\\source\\repos\\finalproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,28 +15,20 @@
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\mystack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mystack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\ellipsecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:ellipsecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\design.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,6 +37,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\ellipsecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:ellipsecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,8 +65,24 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "MyStack.cs",
+              "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MyStack.cs",
+              "RelativeDocumentMoniker": "MyStack.cs",
+              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MyStack.cs",
+              "RelativeToolTip": "MyStack.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T08:22:04.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ClassDiagram.cd",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\ClassDiagram.cd",
               "RelativeDocumentMoniker": "ClassDiagram.cd",
@@ -77,31 +93,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.Designer.cs",
               "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAApwPEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T17:07:20.139Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MyStack.cs",
-              "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MyStack.cs",
-              "RelativeDocumentMoniker": "MyStack.cs",
-              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MyStack.cs",
-              "RelativeToolTip": "MyStack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T16:31:28.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Node.cs",
               "RelativeDocumentMoniker": "Node.cs",
@@ -113,25 +117,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EllipseControl.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\EllipseControl.cs",
               "RelativeDocumentMoniker": "EllipseControl.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\EllipseControl.cs",
               "RelativeToolTip": "EllipseControl.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T15:35:59.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Design.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Design.cs",
               "RelativeDocumentMoniker": "Design.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Design.cs",
               "RelativeToolTip": "Design.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAHQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T16:20:07.376Z"
             },
@@ -143,45 +147,44 @@
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAAADkBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAIsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:33:23.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Calculator.cs",
-              "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Calculator.cs",
-              "RelativeDocumentMoniker": "Calculator.cs",
-              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Calculator.cs*",
-              "RelativeToolTip": "Calculator.cs*",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAEwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:09:01.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T16:33:23.781Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Calculator.cs",
+              "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Calculator.cs",
+              "RelativeDocumentMoniker": "Calculator.cs",
+              "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Calculator.cs",
+              "RelativeToolTip": "Calculator.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T16:09:01.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SpecialCalculator.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\SpecialCalculator.cs",
               "RelativeDocumentMoniker": "SpecialCalculator.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\SpecialCalculator.cs",
               "RelativeToolTip": "SpecialCalculator.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwAUBAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAFcCAAAAAAAAAAApwEACAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:08:59.322Z"
+              "WhenOpened": "2025-04-09T16:08:59.322Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T16:08:56.343Z"
             },

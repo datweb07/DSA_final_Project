@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using customButton;
 
 namespace finalProject
 {
     public partial class MainForm : Form
     {
-        // Flag to determine which calculator to use (normal or special)
+        // Thiết lập cờ cho việc tính toán Calculator hay SpecialCalculator
         private bool useSpecialCalculator = false;
         private bool isRadianMode;
         public MainForm()
@@ -21,9 +22,9 @@ namespace finalProject
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            isRadianMode = false;  //mặc định tính toán với chế độ DEG
+            isRadianMode = false;  // Mặc định tính toán với chế độ DEG
             btnRad.Text = "RAD";
             btnRad.ForeColor = Color.Red;
         }
@@ -51,15 +52,10 @@ namespace finalProject
             {
                 txtScreenResult.Text = string.Empty;
             }
-            else  //tính bình phương
-            {
-                txtScreenResult.Text = txtScreenResult.Text + "";
-            }
 
-            //bỏ đi số 0 ở ScreenExpression khi thực hiện tính căn bậc hai của biểu thức khi mới khởi tạo chương trình
             if (txtScreenExpression.Text == "0")
             {
-                txtScreenExpression.Text = string.Empty;
+                txtScreenExpression.Text = string.Empty;  //Xóa số 0 để tính toán với căn bậc 2
             }
 
             if (btn.Text == ".")
@@ -80,38 +76,15 @@ namespace finalProject
             customButton.Design btn = (customButton.Design)sender;
             string operatorText = btn.Text;
 
-            // If trigonometric function is selected, switch to Special calculator
-            if (operatorText == "sin" || operatorText == "cos" || operatorText == "tan" || operatorText == "cot")
+            // Nếu là hàm lượng giác thì sử dụng SpecialCalculator
+            if (operatorText == "sin⁡" || operatorText == "cos" || operatorText == "tan" || operatorText == "cot")
             {
                 useSpecialCalculator = true;
-
-
-                if (txtScreenExpression.Text == "0" || txtScreenExpression.Text == string.Empty)
-                {
-                    txtScreenExpression.Text = $"{operatorText}(";
-                }
-                else
-                {
-                    txtScreenExpression.Text += $"{operatorText}(";
-                }
-                txtScreenResult.Text = "0";
             }
-            else if (operatorText == ")")
-            {
 
-                if (!string.IsNullOrEmpty(txtScreenResult.Text) && txtScreenResult.Text != "0")
-                {
-                    txtScreenExpression.Text += txtScreenResult.Text + operatorText;
-                    txtScreenResult.Text = "0";
-                }
-                else
-                {
-                    txtScreenExpression.Text += operatorText;
-                }
-            }
-            else if (!string.IsNullOrEmpty(txtScreenResult.Text) && txtScreenResult.Text != "0")
+            if (!string.IsNullOrEmpty(txtScreenResult.Text) && txtScreenResult.Text != "0")
             {
-                // Handle normal operators
+                // Xử lý với các toán tử và toán hạng được lấy từ 2 màn hình
                 if (txtScreenExpression.Text == "0" || txtScreenExpression.Text == string.Empty)
                 {
                     txtScreenExpression.Text = txtScreenResult.Text + " " + btn.Text + " ";
@@ -121,20 +94,6 @@ namespace finalProject
                     txtScreenExpression.Text += txtScreenResult.Text + " " + btn.Text + " ";
                 }
                 txtScreenResult.Text = "0";
-            }
-            else if (operatorText == "+" || operatorText == "-" || operatorText == "×" || operatorText == "÷" || operatorText == "^")
-            {
-                // Allow operators at the end of expression even if no number is entered
-                if (txtScreenExpression.Text.EndsWith(" "))
-                {
-                    // Replace last operator
-                    txtScreenExpression.Text = txtScreenExpression.Text.TrimEnd(' ').TrimEnd('+', '-', '×', '÷', '^');
-                    txtScreenExpression.Text += " " + operatorText + " ";
-                }
-                else if (!string.IsNullOrEmpty(txtScreenExpression.Text) && !txtScreenExpression.Text.EndsWith("("))
-                {
-                    txtScreenExpression.Text += " " + operatorText + " ";
-                }
             }
         }
 
@@ -156,67 +115,40 @@ namespace finalProject
             {
                 string infixExpression;
 
-                // tính toán liên tục
+                // Tính toán liên tục với biểu thức sau dấu =
                 if (!string.IsNullOrEmpty(txtScreenExpression.Text) && txtScreenExpression.Text.Contains("="))
                 {
                     string last = txtScreenExpression.Text.Split('=').Last().Trim();
                     infixExpression = $"{last} {txtScreenResult.Text}";
                 }
+                // Tính toán bình thường
                 else
                 {
-                    // tính toán bình thường
                     infixExpression = $"{txtScreenExpression.Text}{txtScreenResult.Text}";
                 }
 
-                // tính toán với số âm (cần chỉnh lại)
-                string cur = txtScreenResult.Text;
-                if (cur.StartsWith("-"))
+
+                // Chuyển đổi tính toán giữa Calculator và SpecialCalculator
+                if (useSpecialCalculator || infixExpression.Contains("sin") || infixExpression.Contains("cos") || infixExpression.Contains("tan") || infixExpression.Contains("cot"))
                 {
-                    infixExpression = $"{txtScreenExpression.Text}{cur}";
-                }
-
-                // Store original expression for display
-                string originalExpression = infixExpression;
-
-                // Choose which calculator to use based on the presence of trig functions
-                if (useSpecialCalculator ||
-                    infixExpression.Contains("sin") ||
-                    infixExpression.Contains("cos") ||
-                    infixExpression.Contains("tan") ||
-                    infixExpression.Contains("cot"))
-                {
-
-                    string postfix = SpecialCalculator.InfixToPostfix(infixExpression);
-
-
-                    MessageBox.Show($"Trig postfix: {postfix}");
-
-
-                    double symbolicResult = SpecialCalculator.EvaluatePostfix(postfix, isRadianMode);
-
-
-                    double numericalResult = SpecialCalculator.EvaluatePostfix(postfix, isRadianMode);
-
-
-                    txtScreenExpression.Text = $"{originalExpression} = ";
-                    txtScreenResult.Text = numericalResult.ToString();
-
-
-                    MessageBox.Show($"Symbolic form: {symbolicResult}", "Symbolic Result");
+                    string postfixSpecialCalculator = SpecialCalculator.InfixToPostfix(infixExpression);
+                    MessageBox.Show($"Trig postfix: {postfixSpecialCalculator}");
+                    double resultSpecialCalculator = SpecialCalculator.EvaluatePostfix(postfixSpecialCalculator, isRadianMode);
+                    MessageBox.Show($"Result: {resultSpecialCalculator}");
+                    txtScreenExpression.Text = $"{infixExpression} = ";
+                    txtScreenResult.Text = resultSpecialCalculator.ToString();
                 }
                 else
                 {
-
-                    string postfixExpression = Calculator.InfixToPostfix(infixExpression);
-                    MessageBox.Show($"Postfix: {postfixExpression}");
-
-                    double result = Calculator.EvaluatePostfix(postfixExpression);
-
-                    txtScreenExpression.Text = $"{originalExpression} = ";
-                    txtScreenResult.Text = result.ToString();
+                    string postfixCalculator = Calculator.InfixToPostfix(infixExpression);
+                    MessageBox.Show($"Postfix: {postfixCalculator}");
+                    double resultCalculator = Calculator.EvaluatePostfix(postfixCalculator);
+                    txtScreenExpression.Text = $"{infixExpression} = ";
+                    MessageBox.Show($"Result: {resultCalculator}");
+                    txtScreenResult.Text = resultCalculator.ToString();
                 }
 
-                // Reset the special calculator flag for next calculation
+                // Đặt lại chế độ tính toán 
                 useSpecialCalculator = false;
             }
             catch (DivideByZeroException)
@@ -227,20 +159,17 @@ namespace finalProject
             catch (ArgumentException ex)
             {
                 txtScreenResult.Text = "Error";
-                MessageBox.Show($"Error: {ex.Message}", "Calculation Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (InvalidOperationException ex)
             {
                 txtScreenResult.Text = "Invalid expression";
-                MessageBox.Show($"Error: {ex.Message}", "Calculation Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
                 txtScreenResult.Text = "Error";
-                MessageBox.Show($"Error: {ex.Message}", "Calculation Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -248,7 +177,9 @@ namespace finalProject
         {
             // Nếu màn hình hiện "0" thì không làm gì cả
             if (txtScreenResult.Text == "0")
-                return;
+            { 
+                return; 
+            }
 
             // Đổi dấu của số hiện tại
             if (!txtScreenResult.Text.StartsWith("-"))
@@ -260,21 +191,40 @@ namespace finalProject
 
         private void btnToRadian_Click(object sender, EventArgs e)
         {
-            // Toggle between RAD and DEG
-            isRadianMode = !isRadianMode;
-
-            // Update UI button to reflect the current mode
+            // Cập nhật lại nút hiển thị
             UpdateAngleModeIndicator();
 
-            // Optional: Display a message to inform user
-            string mode = isRadianMode ? "RADIAN" : "DEGREE";
-            MessageBox.Show($"Chuyển sang chế độ {mode}.", "Chế độ góc", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Chuyển đổi giữa RAD và DEG
+            isRadianMode = !isRadianMode;
+
+            // Hiển thị thông báo khi chuyển đổi
+            string mode;
+            if (isRadianMode)
+            {
+                mode = "RADIAN";
+            }
+            else
+            {
+                mode = "DEGREE";
+            }
+            MessageBox.Show($"Đã chuyển sang chế độ {mode}.", "Chế độ góc", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void UpdateAngleModeIndicator()
         {
-            btnRad.Text = isRadianMode ? "RAD" : "DEG";
-            btnRad.ForeColor = isRadianMode ? Color.Red : Color.Black;
+            // Kiểm tra isRadianMode
+            if (isRadianMode)
+            {
+                // Nếu đúng thì cập nhật cho chữ và màu cho RAD
+                btnRad.Text = "RAD";
+                btnRad.ForeColor = Color.Red;
+            }
+            else
+            {
+                // Nếu sai thì cập nhật chữ và màu cho DEG
+                btnRad.Text = "DEG";
+                btnRad.ForeColor = Color.Black;
+            }
         }
 
 
@@ -287,13 +237,14 @@ namespace finalProject
             }
             else
             {
+                // Thêm PI vào số sau
                 txtScreenResult.Text = txtScreenResult.Text + Math.PI.ToString();
             }
         }
 
         private void btnFraction_Click(object sender, EventArgs e)
         {
-            // Thay thế số hiện tại bằng 1/x
+            // Nếu bằng 0 thì không làm gì cả
             if (txtScreenResult.Text == "0")
             {
                 txtScreenResult.Text = "0";
@@ -301,6 +252,7 @@ namespace finalProject
             else
             {
                 double currentValue = double.Parse(txtScreenResult.Text);
+                // Nếu khác 0 thì tính 1/x
                 if (currentValue != 0)
                 {
                     txtScreenResult.Text = (1 / currentValue).ToString();

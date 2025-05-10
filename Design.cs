@@ -55,7 +55,7 @@ namespace customButton
             }
         }
 
-        //methods
+        //Methods
         private GraphicsPath gp(RectangleF rect, float radius)
         {
             GraphicsPath gp = new GraphicsPath();

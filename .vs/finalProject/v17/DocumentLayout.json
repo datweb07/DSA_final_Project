@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|c:\\users\\thanh dat\\source\\repos\\finalproject\\specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|c:\\users\\thanh dat\\source\\repos\\finalproject\\mystack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mystack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:specialcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,24 +39,12 @@
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\mystack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:mystack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\design.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:design.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|C:\\Users\\THANH DAT\\source\\repos\\finalProject\\classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{3D6AD7F4-2DB3-4F6D-913F-3EA143EA3888}|finalProject.csproj|solutionrelative:classdiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,30 +70,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "MyStack.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MyStack.cs",
               "RelativeDocumentMoniker": "MyStack.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MyStack.cs",
               "RelativeToolTip": "MyStack.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T08:22:04.72Z"
+              "WhenOpened": "2025-05-08T08:22:04.72Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "ClassDiagram.cd",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\ClassDiagram.cd",
               "RelativeDocumentMoniker": "ClassDiagram.cd",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\ClassDiagram.cd",
               "RelativeToolTip": "ClassDiagram.cd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000968|",
-              "WhenOpened": "2025-04-22T17:13:24.22Z"
+              "WhenOpened": "2025-04-22T17:13:24.22Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
@@ -101,23 +103,25 @@
               "RelativeToolTip": "MainForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T17:07:20.139Z"
+              "WhenOpened": "2025-04-22T17:07:20.139Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Node.cs",
               "RelativeDocumentMoniker": "Node.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Node.cs",
               "RelativeToolTip": "Node.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T16:29:07.096Z"
+              "WhenOpened": "2025-04-22T16:29:07.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EllipseControl.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\EllipseControl.cs",
               "RelativeDocumentMoniker": "EllipseControl.cs",
@@ -125,11 +129,12 @@
               "RelativeToolTip": "EllipseControl.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T15:35:59.971Z"
+              "WhenOpened": "2025-04-22T15:35:59.971Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Design.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Design.cs",
               "RelativeDocumentMoniker": "Design.cs",
@@ -137,49 +142,51 @@
               "RelativeToolTip": "Design.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAAAHQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T16:20:07.376Z"
+              "WhenOpened": "2025-04-10T16:20:07.376Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAAADIBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:33:23.781Z"
+              "WhenOpened": "2025-04-09T16:33:23.781Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Calculator.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Calculator.cs",
               "RelativeDocumentMoniker": "Calculator.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Calculator.cs",
               "RelativeToolTip": "Calculator.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAAMkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAkwIUAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T16:09:01.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "SpecialCalculator.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\SpecialCalculator.cs",
               "RelativeDocumentMoniker": "SpecialCalculator.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\SpecialCalculator.cs",
               "RelativeToolTip": "SpecialCalculator.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAAAD0BAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEBAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T16:08:59.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -187,18 +194,20 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:08:56.343Z"
+              "WhenOpened": "2025-04-09T16:08:56.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\THANH DAT\\source\\repos\\finalProject\\MainForm.cs [Design]",
               "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T16:08:53.035Z"
+              "WhenOpened": "2025-04-09T16:08:53.035Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

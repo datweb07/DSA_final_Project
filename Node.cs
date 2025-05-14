@@ -8,13 +8,13 @@ namespace finalProject
 {
     public class Node
     {
-        public Node next { get; set; }
-        public object data { get; set; }
+        public Node Next { get; set; }
+        public object Data { get; set; }
 
         public Node(object data)
         {
-            this.data = data;
-            this.next = null;
+            this.Data = data;
+            this.Next = null;
         }
     }
 }

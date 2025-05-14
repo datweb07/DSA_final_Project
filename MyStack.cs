@@ -18,8 +18,8 @@ namespace finalProject
         public void Push(object ele)
         {
             Node n = new Node(ele);
-            n.data = ele;
-            n.next = top;
+            n.Data = ele;
+            n.Next = top;
             top = n;
         }
 
@@ -28,13 +28,15 @@ namespace finalProject
             if (top == null)
                 return null;
             Node d = top;
-            top = top.next;
+            top = top.Next;
             return d;
         }
 
         public object Peek()
         {
-            return top.data;
+            if (top == null)
+                return null;
+            return top.Data;
         }
 
         public int Count()
@@ -44,7 +46,7 @@ namespace finalProject
             while (current != null)
             {
                 count++;
-                current = current.next;
+                current = current.Next;
             }
             return count;
         }

@@ -17,6 +17,7 @@ namespace finalProject
         // Thiết lập cờ cho việc tính toán Calculator hay SpecialCalculator
         private bool useSpecialCalculator = false;
         private bool isRadianMode;
+
         public MainForm()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace finalProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            isRadianMode = false;  // Mặc định tính toán với chế độ DEG
+            isRadianMode = false; // Mặc định tính toán với chế độ DEG
             btnRad.Text = "RAD";
             btnRad.ForeColor = Color.Red;
         }
@@ -55,7 +56,7 @@ namespace finalProject
 
             if (txtScreenExpression.Text == "0")
             {
-                txtScreenExpression.Text = string.Empty;  //Xóa số 0 để tính toán với căn bậc 2
+                txtScreenExpression.Text = string.Empty; //Xóa số 0 để tính toán với căn bậc 2
             }
 
             if (btn.Text == ".")
@@ -77,7 +78,12 @@ namespace finalProject
             string operatorText = btn.Text;
 
             // Nếu là hàm lượng giác thì sử dụng SpecialCalculator
-            if (operatorText == "sin⁡" || operatorText == "cos" || operatorText == "tan" || operatorText == "cot")
+            if (
+                operatorText == "sin⁡"
+                || operatorText == "cos"
+                || operatorText == "tan"
+                || operatorText == "cot"
+            )
             {
                 useSpecialCalculator = true;
             }
@@ -116,7 +122,10 @@ namespace finalProject
                 string infixExpression;
 
                 // Tính toán liên tục với biểu thức sau dấu =
-                if (!string.IsNullOrEmpty(txtScreenExpression.Text) && txtScreenExpression.Text.Contains("="))
+                if (
+                    !string.IsNullOrEmpty(txtScreenExpression.Text)
+                    && txtScreenExpression.Text.Contains("=")
+                )
                 {
                     string last = txtScreenExpression.Text.Split('=').Last().Trim();
                     infixExpression = $"{last} {txtScreenResult.Text}";
@@ -127,13 +136,21 @@ namespace finalProject
                     infixExpression = $"{txtScreenExpression.Text}{txtScreenResult.Text}";
                 }
 
-
                 // Chuyển đổi tính toán giữa Calculator và SpecialCalculator
-                if (useSpecialCalculator || infixExpression.Contains("sin") || infixExpression.Contains("cos") || infixExpression.Contains("tan") || infixExpression.Contains("cot"))
+                if (
+                    useSpecialCalculator
+                    || infixExpression.Contains("sin")
+                    || infixExpression.Contains("cos")
+                    || infixExpression.Contains("tan")
+                    || infixExpression.Contains("cot")
+                )
                 {
                     string postfixSpecialCalculator = SpecialCalculator.InfixToPostfix(infixExpression);
                     MessageBox.Show($"Trig postfix: {postfixSpecialCalculator}");
-                    double resultSpecialCalculator = SpecialCalculator.EvaluatePostfix(postfixSpecialCalculator, isRadianMode);
+                    double resultSpecialCalculator = SpecialCalculator.EvaluatePostfix(
+                        postfixSpecialCalculator,
+                        isRadianMode
+                    );
                     MessageBox.Show($"Result: {resultSpecialCalculator}");
                     txtScreenExpression.Text = $"{infixExpression} = ";
                     txtScreenResult.Text = resultSpecialCalculator.ToString();
@@ -148,7 +165,7 @@ namespace finalProject
                     txtScreenResult.Text = resultCalculator.ToString();
                 }
 
-                // Đặt lại chế độ tính toán 
+                // Đặt lại chế độ tính toán
                 useSpecialCalculator = false;
             }
             catch (DivideByZeroException)
@@ -159,17 +176,32 @@ namespace finalProject
             catch (ArgumentException ex)
             {
                 txtScreenResult.Text = "Error";
-                MessageBox.Show($"Error: {ex.Message}", "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    $"Error: {ex.Message}",
+                    "Calculation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
             catch (InvalidOperationException ex)
             {
                 txtScreenResult.Text = "Invalid expression";
-                MessageBox.Show($"Error: {ex.Message}", "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    $"Error: {ex.Message}",
+                    "Calculation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
             catch (Exception ex)
             {
                 txtScreenResult.Text = "Error";
-                MessageBox.Show($"Error: {ex.Message}", "Calculation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    $"Error: {ex.Message}",
+                    "Calculation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 
@@ -177,8 +209,8 @@ namespace finalProject
         {
             // Nếu màn hình hiện "0" thì không làm gì cả
             if (txtScreenResult.Text == "0")
-            { 
-                return; 
+            {
+                return;
             }
 
             // Đổi dấu của số hiện tại
@@ -207,7 +239,12 @@ namespace finalProject
             {
                 mode = "DEGREE";
             }
-            MessageBox.Show($"Đã chuyển sang chế độ {mode}.", "Chế độ góc", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(
+                $"Đã chuyển sang chế độ {mode}.",
+                "Chế độ góc",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
 
         private void UpdateAngleModeIndicator()
@@ -226,7 +263,6 @@ namespace finalProject
                 btnRad.ForeColor = Color.Black;
             }
         }
-
 
         private void btnPi_Click(object sender, EventArgs e)
         {
@@ -259,7 +295,12 @@ namespace finalProject
                 }
                 else
                 {
-                    MessageBox.Show("Không tính toán với số 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "Không tính toán với số 0",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
             }
         }

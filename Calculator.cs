@@ -15,17 +15,17 @@ namespace finalProject
         {
             switch (c)
             {
-                case '√': 
+                case '√':
                     return 4;
-                case '^': 
+                case '^':
                     return 3;
                 case '*':
-                case '/': 
+                case '/':
                     return 2;
                 case '+':
-                case '-': 
+                case '-':
                     return 1;
-                default: 
+                default:
                     return 0;
             }
         }
@@ -45,11 +45,24 @@ namespace finalProject
                 {
                     createNumber += c;
                 }
-                else if (c == '-' && (i == 0 || infix[i - 1] == '(' || "+-*/^".Contains(infix[i - 1])))
+                else if (
+                    c == '-'
+                    && (
+                        i == 0
+                        || infix[i - 1] == '('
+                        || (
+                            infix[i - 1] == '+'
+                            || infix[i - 1] == '-'
+                            || infix[i - 1] == '*'
+                            || infix[i - 1] == '/'
+                            || infix[i - 1] == '^'
+                        )
+                    )
+                )
                 {
                     createNumber += c;
                 }
-                else if (c == ' ')
+                else if (char.IsWhiteSpace(c))
                 {
                     continue;
                 }
@@ -70,17 +83,19 @@ namespace finalProject
                     {
                         while (!stack.IsEmpty() && (string)stack.Peek() != "(")
                         {
-                            postFix.Add(stack.Pop().data.ToString());
+                            postFix.Add(stack.Pop().Data.ToString());
                         }
-                        stack.Pop(); 
+                        stack.Pop();
                     }
                     // Kiếm tra mức độ ưu tiên của toán tử
-                    else 
+                    else
                     {
                         string cur = c.ToString();
-                        while (!stack.IsEmpty() && DoUuTien(((string)stack.Peek())[0]) >= DoUuTien(cur[0]))
+                        while (
+                            !stack.IsEmpty() && DoUuTien(((string)stack.Peek())[0]) >= DoUuTien(cur[0])
+                        )
                         {
-                            postFix.Add(stack.Pop().data.ToString());
+                            postFix.Add(stack.Pop().Data.ToString());
                         }
                         stack.Push(cur);
                     }
@@ -96,7 +111,7 @@ namespace finalProject
             // Đẩy các toán tử còn lại từ stakk vào postFix
             while (!stack.IsEmpty())
             {
-                postFix.Add(stack.Pop().data.ToString());
+                postFix.Add(stack.Pop().Data.ToString());
             }
 
             return string.Join(" ", postFix);
@@ -113,7 +128,11 @@ namespace finalProject
                 char ch = postFix[i];
 
                 // Xử lý số (bao gồm cả số âm và số thập phân)
-                if (char.IsDigit(ch) || ch == '.' || (ch == '-' && (i + 1 < postFix.Length && char.IsDigit(postFix[i + 1]))))
+                if (
+                    char.IsDigit(ch)
+                    || ch == '.'
+                    || (ch == '-' && i + 1 < postFix.Length && char.IsDigit(postFix[i + 1]))
+                )
                 {
                     createNumber += ch;
                 }
@@ -137,11 +156,11 @@ namespace finalProject
                         if (stack.Count() < 1)
                         {
                             throw new InvalidOperationException("Không đủ toán hạng");
-                        }    
-                        double ele = (double)stack.Pop().data;
+                        }
+                        double ele = (double)stack.Pop().Data;
                         if (ele < 0)
-                        { 
-                            throw new ArgumentException("Lỗi! Là số âm"); 
+                        {
+                            throw new ArgumentException("Lỗi! Là số âm");
                         }
                         stack.Push(Math.Sqrt(ele));
                     }
@@ -149,36 +168,37 @@ namespace finalProject
                     else
                     {
                         if (stack.Count() < 2)
-                        { 
-                            throw new InvalidOperationException("Không đủ toán hạng"); 
+                        {
+                            throw new InvalidOperationException("Không đủ toán hạng");
                         }
 
-                        double second_op = (double)stack.Pop().data;
-                        double first_op = (double)stack.Pop().data;
+                        double second_op = (double)stack.Pop().Data;
+                        double first_op = (double)stack.Pop().Data;
                         double result = 0;
 
                         switch (ch)
                         {
-                            case '^': 
-                                result = Math.Pow(first_op, second_op); 
+                            case '^':
+                                result = Math.Pow(first_op, second_op);
                                 break;
-                            case '+': 
-                                result = first_op + second_op; 
+                            case '+':
+                                result = first_op + second_op;
                                 break;
-                            case '-': 
-                                result = first_op - second_op; 
+                            case '-':
+                                result = first_op - second_op;
                                 break;
-                            case '*': 
-                                result = first_op * second_op; 
+                            case '*':
+                                result = first_op * second_op;
                                 break;
                             case '/':
                                 if (second_op == 0)
-                                { 
-                                    throw new DivideByZeroException(); 
+                                {
+                                    throw new DivideByZeroException();
                                 }
-                                result = first_op / second_op; 
+                                result = first_op / second_op;
                                 break;
-                            default: throw new ArgumentException($"Toán tử không hợp lệ: {ch}");
+                            default:
+                                throw new ArgumentException($"Toán tử không hợp lệ: {ch}");
                         }
                         stack.Push(result);
                     }
@@ -193,11 +213,11 @@ namespace finalProject
 
             // Kiểm tra tính hợp lệ của biểu thức trong stack
             if (stack.Count() != 1)
-            { 
-                throw new InvalidOperationException("Biểu thức không hợp lệ"); 
+            {
+                throw new InvalidOperationException("Biểu thức không hợp lệ");
             }
 
-            return (double)stack.Pop().data;
+            return (double)stack.Pop().Data;
         }
     }
 }

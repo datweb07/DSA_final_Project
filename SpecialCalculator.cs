@@ -34,7 +34,6 @@ namespace finalProject
             }
         }
 
-
         // Tokenize expression xử lý các toán tử, toán hạng, hàm lượng giác
         public static List<string> TokenizeExpression(string expression)
         {
@@ -55,13 +54,21 @@ namespace finalProject
                 if (c == '-')
                 {
                     // Được coi là dấu âm thực sự
-                    if (i == 0 || (i > 0 && (expression[i - 1] == '+' || 
-                                             expression[i - 1] == '-' || 
-                                             expression[i - 1] == '*' || 
-                                             expression[i - 1] == '/' || 
-                                             expression[i - 1] == '^' || 
-                                             expression[i - 1] == '√' || 
-                                             expression[i - 1] == '('))) 
+                    if (
+                        i == 0
+                        || (
+                            i > 0
+                            && (
+                                expression[i - 1] == '+'
+                                || expression[i - 1] == '-'
+                                || expression[i - 1] == '*'
+                                || expression[i - 1] == '/'
+                                || expression[i - 1] == '^'
+                                || expression[i - 1] == '√'
+                                || expression[i - 1] == '('
+                            )
+                        )
+                    )
                     {
                         minus = true;
                         i++;
@@ -106,14 +113,25 @@ namespace finalProject
                     }
                     currentToken += c;
                     i++;
-                    while (i < expression.Length && (char.IsDigit(expression[i]) || expression[i] == '.'))
+                    while (
+                        i < expression.Length && (char.IsDigit(expression[i]) || expression[i] == '.')
+                    )
                     {
                         currentToken += expression[i];
                         i++;
                     }
                     tokens.Add(currentToken);
                 }
-                else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == '√' || c == '(')
+                else if (
+                    c == '+'
+                    || c == '-'
+                    || c == '*'
+                    || c == '/'
+                    || c == '^'
+                    || c == '√'
+                    || c == '('
+                    || c == ')'
+                )
                 {
                     if (minus)
                     {
@@ -152,14 +170,14 @@ namespace finalProject
                 {
                     while (stack.Count() > 0 && (string)stack.Peek() != "(")
                     {
-                        postFix.Add(stack.Pop().data.ToString());
+                        postFix.Add(stack.Pop().Data.ToString());
                     }
                     if (stack.Count() > 0 && (string)stack.Peek() == "(")
                     {
                         stack.Pop();
                         if (stack.Count() > 0 && IsTrigFunction((string)stack.Peek()))
                         {
-                            postFix.Add(stack.Pop().data.ToString());
+                            postFix.Add(stack.Pop().Data.ToString());
                         }
                     }
                 }
@@ -169,9 +187,13 @@ namespace finalProject
                 }
                 else
                 {
-                    while (stack.Count() > 0 && (string)stack.Peek() != "(" && DoUuTien((string)stack.Peek()) >= DoUuTien(token))
+                    while (
+                        stack.Count() > 0
+                        && (string)stack.Peek() != "("
+                        && DoUuTien((string)stack.Peek()) >= DoUuTien(token)
+                    )
                     {
-                        postFix.Add(stack.Pop().data.ToString());
+                        postFix.Add(stack.Pop().Data.ToString());
                     }
                     stack.Push(token);
                 }
@@ -179,7 +201,7 @@ namespace finalProject
 
             while (stack.Count() > 0)
             {
-                postFix.Add(stack.Pop().data.ToString());
+                postFix.Add(stack.Pop().Data.ToString());
             }
 
             return string.Join(" ", postFix);
@@ -210,7 +232,8 @@ namespace finalProject
                 return false;
             }
             double number;
-            if (char.IsDigit(token[0]) || token[0] == '+' || token[0] == '-' || token[0] == '.')
+            // Token là kiểu string nên không ép về char được, phải dùng char[0]
+            if (char.IsDigit(token[0]) || token == "+" || token == "-" || token == ".")
             {
                 return double.TryParse(token, out number);
             }
@@ -227,7 +250,7 @@ namespace finalProject
             {
                 tokens = postFix.Split(' ');
             }
-            
+
             foreach (string token in tokens)
             {
                 if (IsNumber(token))
@@ -237,10 +260,10 @@ namespace finalProject
                 else if (IsTrigFunction(token))
                 {
                     if (stack.Count() < 1)
-                    { 
-                        throw new InvalidOperationException("Không đủ toán hạng cho hàm " + token); 
+                    {
+                        throw new InvalidOperationException("Không đủ toán hạng cho hàm " + token);
                     }
-                    double value = (double)stack.Pop().data;
+                    double value = (double)stack.Pop().Data;
                     double result = ProcessTrigFunction(token, value, isRadianMode);
                     stack.Push(result);
                 }
@@ -248,9 +271,9 @@ namespace finalProject
                 {
                     if (stack.Count() < 1)
                     {
-                        throw new InvalidOperationException("Không đủ toán hạng cho hàm " + token); 
+                        throw new InvalidOperationException("Không đủ toán hạng cho hàm " + token);
                     }
-                    double value = (double)stack.Pop().data;
+                    double value = (double)stack.Pop().Data;
                     string func = token.Substring(1);
                     double result = ProcessTrigFunction(func, value, isRadianMode);
                     stack.Push(-result);
@@ -259,23 +282,23 @@ namespace finalProject
                 {
                     if (stack.Count() < 1)
                     {
-                        throw new InvalidOperationException("Không đủ toán hạng"); 
+                        throw new InvalidOperationException("Không đủ toán hạng");
                     }
-                    double ele = (double)stack.Pop().data;
+                    double ele = (double)stack.Pop().Data;
                     if (ele < 0)
                     {
-                        throw new ArgumentException("Không thể tính căn số âm"); 
+                        throw new ArgumentException("Không thể tính căn số âm");
                     }
                     stack.Push(Math.Sqrt(ele));
                 }
-                else if ("+-*/^".Contains(token))
+                else if (token == "+" || token == "-" || token == "*" || token == "/" || token == "^")
                 {
                     if (stack.Count() < 2)
                     {
-                        throw new InvalidOperationException("Không đủ toán hạng"); 
+                        throw new InvalidOperationException("Không đủ toán hạng");
                     }
-                    double second_op = (double)stack.Pop().data;
-                    double first_op = (double)stack.Pop().data;
+                    double second_op = (double)stack.Pop().Data;
+                    double first_op = (double)stack.Pop().Data;
                     double result = ProcessOperator(token[0], first_op, second_op);
                     stack.Push(result);
                 }
@@ -287,9 +310,9 @@ namespace finalProject
 
             if (stack.Count() != 1)
             {
-                throw new InvalidOperationException("Biểu thức không hợp lệ"); 
+                throw new InvalidOperationException("Biểu thức không hợp lệ");
             }
-            return (double)stack.Pop().data;
+            return (double)stack.Pop().Data;
         }
 
         // Tính toán giá trị của hàm lượng giác
@@ -335,7 +358,7 @@ namespace finalProject
                 case '/':
                     if (second == 0)
                     {
-                        throw new DivideByZeroException(); 
+                        throw new DivideByZeroException();
                     }
                     return first / second;
                 default:

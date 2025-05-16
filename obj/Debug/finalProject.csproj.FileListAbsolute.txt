@@ -8,3 +8,4 @@ C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.csproj.CoreC
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.exe
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.pdb
 C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.MainForm.resources
+C:\Users\THANH DAT\source\repos\finalProject\obj\Debug\finalProject.exe.config

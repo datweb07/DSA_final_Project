@@ -233,7 +233,7 @@ namespace finalProject
             }
             double number;
             // Token là kiểu string nên không ép về char được, phải dùng char[0]
-            if (char.IsDigit(token[0]) || token == "+" || token == "-" || token == ".")
+            if (char.IsDigit(token[0]) || token[0] == '+' || token[0] == '-' || token[0] == '.')
             {
                 return double.TryParse(token, out number);
             }

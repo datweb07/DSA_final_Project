@@ -36,11 +36,6 @@ namespace finalProject
             txtScreenExpression.Text = string.Empty;
         }
 
-        private void btnCE_Click(object sender, EventArgs e)
-        {
-            txtScreenResult.Text = "0";
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -71,13 +71,13 @@ namespace finalProject
                     )
                     {
                         minus = true;
-                        i++;
-                        if (i >= expression.Length)
+                        i++; // Tiến tới kí tự tiếp theo để lấy phần số
+                        if (i >= expression.Length)   // Nế không còn kí tự nào sau dấu âm (vượt quá giới hạn)
                         {
                             tokens.Add("-");
                             break;
                         }
-                        c = expression[i];
+                        c = expression[i];  // Cập nhật lại kí tự tiếp theo để ghép với dấu âm
                     }
                     // Được coi là toán tử thông thường
                     else
@@ -91,13 +91,13 @@ namespace finalProject
                 if (char.IsLetter(c))
                 {
                     string currentToken = "";
-                    if (minus)
+                    if (minus)   // Nếu trước đó là dấu âm thì ghép vào trước
                     {
                         currentToken += "-";
                     }
                     currentToken += c;
                     i++;
-                    while (i < expression.Length && char.IsLetter(expression[i]))
+                    while (i < expression.Length && char.IsLetter(expression[i]))   // Gắn các kí tự tiếp theo để tạo hàm hoàn chỉnh
                     {
                         currentToken += expression[i];
                         i++;
@@ -114,7 +114,7 @@ namespace finalProject
                     currentToken += c;
                     i++;
                     while (
-                        i < expression.Length && (char.IsDigit(expression[i]) || expression[i] == '.')
+                        i < expression.Length && (char.IsDigit(expression[i]) || expression[i] == '.')  // Gắn các phần còn lại của số, kể cả phần thập phân
                     )
                     {
                         currentToken += expression[i];
@@ -135,7 +135,7 @@ namespace finalProject
                 {
                     if (minus)
                     {
-                        tokens.Add("-");
+                        tokens.Add("-");   // Xem như toán tử bình thường
                     }
                     tokens.Add(c.ToString());
                     i++;
@@ -175,6 +175,7 @@ namespace finalProject
                     if (stack.Count() > 0 && (string)stack.Peek() == "(")
                     {
                         stack.Pop();
+                        // Nếu trước "(" là hàm lượng giác, đưa vào postFix luôn
                         if (stack.Count() > 0 && IsTrigFunction((string)stack.Peek()))
                         {
                             postFix.Add(stack.Pop().Data.ToString());
@@ -198,7 +199,7 @@ namespace finalProject
                     stack.Push(token);
                 }
             }
-
+            // Đưa các toán tử còn lại từ stack vào postFix
             while (stack.Count() > 0)
             {
                 postFix.Add(stack.Pop().Data.ToString());
@@ -235,7 +236,7 @@ namespace finalProject
             // Token là kiểu string nên không ép về char được, phải dùng char[0]
             if (char.IsDigit(token[0]) || token[0] == '+' || token[0] == '-' || token[0] == '.')
             {
-                return double.TryParse(token, out number);
+                return double.TryParse(token, out number);   // Thử chuyển đổi token sang kiểu double. đúng thì trả về true
             }
             // Đây không phải là số
             return false;

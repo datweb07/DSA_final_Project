@@ -893,8 +893,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
